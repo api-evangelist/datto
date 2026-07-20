@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+docs: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+note: >-
+  The Datto RMM v2 OpenAPI does not declare securitySchemes in components, but
+  the API v2 documentation specifies OAuth 2.0. A user generates an API Key and
+  API Secret Key in the RMM Setup interface; those credentials are exchanged for
+  an OAuth 2.0 access token which is presented as a Bearer token on subsequent
+  requests. Access tokens expire after 100 hours. Requests are scoped to the
+  permissions of the RMM user whose keys were used.
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - password
+  token_lifetime: 100 hours
+  credential_source: API Key + API Secret Key generated in RMM Setup
+schemes:
+- name: OAuth2
+  type: oauth2
+  flow: password
+  token_endpoint: https://[platform]-api.centrastage.net/auth/oauth/token
+  presented_as: Authorization Bearer
+  bearer_format: JWT access token
+  token_ttl_hours: 100
+  regional_hosts:
+  - concord-api.centrastage.net
+  - merlot-api.centrastage.net
+  - pinotage-api.centrastage.net
+  - vidal-api.centrastage.net
+  - zinfandel-api.centrastage.net
+  - syrah-api.centrastage.net
+  sources:
+  - openapi/datto-rmm-openapi.json
