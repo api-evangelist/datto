@@ -1,0 +1,135 @@
+openapi: 3.1.0
+info:
+  title: Datto RMM /v2/account /v2/account /v2/system API
+  description: Datto RMM (Remote Monitoring and Management) REST API
+  license:
+    name: '©Datto, Inc. - All rights reserved. '
+    url: http://www.datto.com/
+  version: 2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)
+servers:
+- url: https://concord-api.centrastage.net/api
+  description: Generated server url
+tags:
+- name: /v2/system
+  description: RMM API System operations
+paths:
+  /v2/system/status:
+    get:
+      tags:
+      - /v2/system
+      summary: Fetches the system status (start date, status and version).
+      description: An API access token is not necessary.
+      operationId: getStatus
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+  /v2/system/request_rate:
+    get:
+      tags:
+      - /v2/system
+      summary: Fetches the request rate status for the authenticated user's account.
+      operationId: get
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateStatusResponse'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RateStatusResponse'
+  /v2/system/pagination:
+    get:
+      tags:
+      - /v2/system
+      summary: Fetches the pagination configurations.
+      operationId: getPaginationConfigurations
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginationConfiguration'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginationConfiguration'
+components:
+  schemas:
+    PaginationConfiguration:
+      type: object
+      description: Pagination configuration
+      properties:
+        max:
+          type: integer
+          format: int32
+          description: Default and maximum number of elements per AEM page (except alerts pagination)
+    StatusResponse:
+      type: object
+      properties:
+        version:
+          type: string
+        status:
+          type: string
+        started:
+          type: string
+          format: date-time
+    OperationRateStatus:
+      type: object
+      properties:
+        limit:
+          type: integer
+          format: int32
+        count:
+          type: integer
+          format: int32
+    RateStatusResponse:
+      type: object
+      properties:
+        slidingTimeWindowSizeSeconds:
+          type: integer
+          format: int64
+        accountUid:
+          type: string
+        accountCount:
+          type: integer
+          format: int64
+        accountRateLimit:
+          type: integer
+          format: int64
+        accountCutOffRatio:
+          type: number
+          format: float
+        accountWriteRateLimit:
+          type: integer
+          format: int32
+        accountWriteCount:
+          type: integer
+          format: int64
+        operationWriteStatus:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/OperationRateStatus'

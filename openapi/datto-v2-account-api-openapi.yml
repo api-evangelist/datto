@@ -1,0 +1,2057 @@
+openapi: 3.1.0
+info:
+  title: Datto RMM /v2/account /v2/account /v2/account API
+  description: Datto RMM (Remote Monitoring and Management) REST API
+  license:
+    name: '©Datto, Inc. - All rights reserved. '
+    url: http://www.datto.com/
+  version: 2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)
+servers:
+- url: https://concord-api.centrastage.net/api
+  description: Generated server url
+tags:
+- name: /v2/account
+  description: Operations on accounts
+paths:
+  /v2/account/variable:
+    put:
+      tags:
+      - /v2/account
+      summary: Creates an account variable
+      operationId: createAccountVariable
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Variable Creation Request'
+        required: true
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Request aborted due to concurrent write access to this record.
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+        '400':
+          description: Request parameters are invalid.
+        '404':
+          description: Variable was not found.
+        '401':
+          description: Request can not be authorized.
+  /v2/account/variable/{variableId}:
+    post:
+      tags:
+      - /v2/account
+      summary: Updates the account variable identified by the given variable Id.
+      operationId: updateAccountVariable
+      parameters:
+      - name: variableId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Variable Update Request'
+        required: true
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Request aborted due to concurrent write access to this record.
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+        '400':
+          description: Request parameters are invalid.
+        '404':
+          description: Variable was not found.
+        '401':
+          description: Request can not be authorized.
+    delete:
+      tags:
+      - /v2/account
+      summary: Deletes the account variable identified by the given variable Id.
+      operationId: deleteAccountVariable
+      parameters:
+      - name: variableId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Request aborted due to concurrent write access to this record.
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+        '400':
+          description: Request parameters are invalid.
+        '404':
+          description: Variable was not found.
+        '401':
+          description: Request can not be authorized.
+  /v2/account:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the authenticated user's account data.
+      operationId: getUserAccount
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+  /v2/account/variables:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the account variables.
+      operationId: getAccountVariables
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariablesPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VariablesPage'
+  /v2/account/users:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the authentication users records of the authenticated user's account.
+      operationId: getUsers
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsersPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsersPage'
+  /v2/account/sites:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the site records of the authenticated user's account.
+      operationId: getSites
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: siteName
+        in: query
+        description: Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed.
+        required: false
+        schema:
+          type: string
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SitesPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SitesPage'
+  /v2/account/dnet-site-mappings:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the sites records with its mapped dnet network id for the authenticated user's account.
+      operationId: getDnetSiteMappings
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DnetSiteMappingsPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DnetSiteMappingsPage'
+  /v2/account/devices:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the devices of the authenticated user's account.
+      operationId: getUserAccountDevices
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: filterId
+        in: query
+        description: Optional. If applied, this filter exclusively determines the results.
+        required: false
+        schema:
+          type: integer
+          format: int64
+      - name: hostname
+        in: query
+        description: Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed.
+        required: false
+        schema:
+          type: string
+      - name: deviceType
+        in: query
+        description: Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed.
+        required: false
+        schema:
+          type: string
+      - name: operatingSystem
+        in: query
+        description: Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed.
+        required: false
+        schema:
+          type: string
+      - name: siteName
+        in: query
+        description: Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed.
+        required: false
+        schema:
+          type: string
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevicesPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevicesPage'
+        '404':
+          description: Filter was not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevicesPage'
+  /v2/account/components:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches the components records of the authenticated user's account.
+      operationId: getComponents
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComponentsPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComponentsPage'
+  /v2/account/alerts/resolved:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches resolved alerts of the authenticated user's account.
+      description: If the muted parameter is not provided, both muted and umuted alerts will be queried.
+      operationId: getUserAccountClosedAlerts
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: muted
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsPage'
+  /v2/account/alerts/open:
+    get:
+      tags:
+      - /v2/account
+      summary: Fetches open alerts of the authenticated user's account.
+      description: If the muted parameter is not provided, both muted and umuted alerts will be queried.
+      operationId: getUserAccountOpenAlerts
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: max
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: muted
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Conflict
+        '403':
+          description: Authenticated user doesn't have access to this resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsPage'
+        '401':
+          description: Request can not be authorized.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsPage'
+components:
+  schemas:
+    AlertMonitorInfo:
+      type: object
+      description: Alert monitor information
+      properties:
+        sendsEmails:
+          type: boolean
+        createsTicket:
+          type: boolean
+    DevicesPage:
+      type: object
+      description: Devices page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/Device'
+    DnetSiteMappingsDto:
+      type: object
+      description: Dnet site mappings data
+      properties:
+        id:
+          type: integer
+          format: int64
+        uid:
+          type: string
+          description: Unique alphanumeric UID of this site
+        accountUid:
+          type: string
+          description: Unique alphanumeric UID of the account to which this site belongs
+        name:
+          type: string
+        description:
+          type: string
+        dattoNetworkingNetworkIds:
+          type: array
+          items:
+            type: integer
+            format: int64
+        portalUrl:
+          type: string
+    EventLogContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          logName:
+            type: string
+          code:
+            type: string
+          type:
+            type: string
+          source:
+            type: string
+          description:
+            type: string
+          triggerCount:
+            type: integer
+            format: int32
+          lastTriggered:
+            type: string
+            format: date-time
+          causedSuspension:
+            type: boolean
+    TemperatureContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          degree:
+            type: number
+            format: float
+          type:
+            type: string
+            enum:
+            - CPU
+            - MEMORY
+            - TEMPERATURE
+            - FAN
+            - DISKHEALTH
+            - PSU
+            - SNMP_THROUGHPUT
+    CustomSNMPContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          displayName:
+            type: string
+          currentValue:
+            type: string
+          monitorInstance:
+            type: string
+    Udf:
+      type: object
+      description: User defined fields
+      properties:
+        udf1:
+          type: string
+        udf2:
+          type: string
+        udf3:
+          type: string
+        udf4:
+          type: string
+        udf5:
+          type: string
+        udf6:
+          type: string
+        udf7:
+          type: string
+        udf8:
+          type: string
+        udf9:
+          type: string
+        udf10:
+          type: string
+        udf11:
+          type: string
+        udf12:
+          type: string
+        udf13:
+          type: string
+        udf14:
+          type: string
+        udf15:
+          type: string
+        udf16:
+          type: string
+        udf17:
+          type: string
+        udf18:
+          type: string
+        udf19:
+          type: string
+        udf20:
+          type: string
+        udf21:
+          type: string
+        udf22:
+          type: string
+        udf23:
+          type: string
+        udf24:
+          type: string
+        udf25:
+          type: string
+        udf26:
+          type: string
+        udf27:
+          type: string
+        udf28:
+          type: string
+        udf29:
+          type: string
+        udf30:
+          type: string
+        udf31:
+          type: string
+        udf32:
+          type: string
+        udf33:
+          type: string
+        udf34:
+          type: string
+        udf35:
+          type: string
+        udf36:
+          type: string
+        udf37:
+          type: string
+        udf38:
+          type: string
+        udf39:
+          type: string
+        udf40:
+          type: string
+        udf41:
+          type: string
+        udf42:
+          type: string
+        udf43:
+          type: string
+        udf44:
+          type: string
+        udf45:
+          type: string
+        udf46:
+          type: string
+        udf47:
+          type: string
+        udf48:
+          type: string
+        udf49:
+          type: string
+        udf50:
+          type: string
+        udf51:
+          type: string
+        udf52:
+          type: string
+        udf53:
+          type: string
+        udf54:
+          type: string
+        udf55:
+          type: string
+        udf56:
+          type: string
+        udf57:
+          type: string
+        udf58:
+          type: string
+        udf59:
+          type: string
+        udf60:
+          type: string
+        udf61:
+          type: string
+        udf62:
+          type: string
+        udf63:
+          type: string
+        udf64:
+          type: string
+        udf65:
+          type: string
+        udf66:
+          type: string
+        udf67:
+          type: string
+        udf68:
+          type: string
+        udf69:
+          type: string
+        udf70:
+          type: string
+        udf71:
+          type: string
+        udf72:
+          type: string
+        udf73:
+          type: string
+        udf74:
+          type: string
+        udf75:
+          type: string
+        udf76:
+          type: string
+        udf77:
+          type: string
+        udf78:
+          type: string
+        udf79:
+          type: string
+        udf80:
+          type: string
+        udf81:
+          type: string
+        udf82:
+          type: string
+        udf83:
+          type: string
+        udf84:
+          type: string
+        udf85:
+          type: string
+        udf86:
+          type: string
+        udf87:
+          type: string
+        udf88:
+          type: string
+        udf89:
+          type: string
+        udf90:
+          type: string
+        udf91:
+          type: string
+        udf92:
+          type: string
+        udf93:
+          type: string
+        udf94:
+          type: string
+        udf95:
+          type: string
+        udf96:
+          type: string
+        udf97:
+          type: string
+        udf98:
+          type: string
+        udf99:
+          type: string
+        udf100:
+          type: string
+        udf101:
+          type: string
+        udf102:
+          type: string
+        udf103:
+          type: string
+        udf104:
+          type: string
+        udf105:
+          type: string
+        udf106:
+          type: string
+        udf107:
+          type: string
+        udf108:
+          type: string
+        udf109:
+          type: string
+        udf110:
+          type: string
+        udf111:
+          type: string
+        udf112:
+          type: string
+        udf113:
+          type: string
+        udf114:
+          type: string
+        udf115:
+          type: string
+        udf116:
+          type: string
+        udf117:
+          type: string
+        udf118:
+          type: string
+        udf119:
+          type: string
+        udf120:
+          type: string
+        udf121:
+          type: string
+        udf122:
+          type: string
+        udf123:
+          type: string
+        udf124:
+          type: string
+        udf125:
+          type: string
+        udf126:
+          type: string
+        udf127:
+          type: string
+        udf128:
+          type: string
+        udf129:
+          type: string
+        udf130:
+          type: string
+        udf131:
+          type: string
+        udf132:
+          type: string
+        udf133:
+          type: string
+        udf134:
+          type: string
+        udf135:
+          type: string
+        udf136:
+          type: string
+        udf137:
+          type: string
+        udf138:
+          type: string
+        udf139:
+          type: string
+        udf140:
+          type: string
+        udf141:
+          type: string
+        udf142:
+          type: string
+        udf143:
+          type: string
+        udf144:
+          type: string
+        udf145:
+          type: string
+        udf146:
+          type: string
+        udf147:
+          type: string
+        udf148:
+          type: string
+        udf149:
+          type: string
+        udf150:
+          type: string
+        udf151:
+          type: string
+        udf152:
+          type: string
+        udf153:
+          type: string
+        udf154:
+          type: string
+        udf155:
+          type: string
+        udf156:
+          type: string
+        udf157:
+          type: string
+        udf158:
+          type: string
+        udf159:
+          type: string
+        udf160:
+          type: string
+        udf161:
+          type: string
+        udf162:
+          type: string
+        udf163:
+          type: string
+        udf164:
+          type: string
+        udf165:
+          type: string
+        udf166:
+          type: string
+        udf167:
+          type: string
+        udf168:
+          type: string
+        udf169:
+          type: string
+        udf170:
+          type: string
+        udf171:
+          type: string
+        udf172:
+          type: string
+        udf173:
+          type: string
+        udf174:
+          type: string
+        udf175:
+          type: string
+        udf176:
+          type: string
+        udf177:
+          type: string
+        udf178:
+          type: string
+        udf179:
+          type: string
+        udf180:
+          type: string
+        udf181:
+          type: string
+        udf182:
+          type: string
+        udf183:
+          type: string
+        udf184:
+          type: string
+        udf185:
+          type: string
+        udf186:
+          type: string
+        udf187:
+          type: string
+        udf188:
+          type: string
+        udf189:
+          type: string
+        udf190:
+          type: string
+        udf191:
+          type: string
+        udf192:
+          type: string
+        udf193:
+          type: string
+        udf194:
+          type: string
+        udf195:
+          type: string
+        udf196:
+          type: string
+        udf197:
+          type: string
+        udf198:
+          type: string
+        udf199:
+          type: string
+        udf200:
+          type: string
+        udf201:
+          type: string
+        udf202:
+          type: string
+        udf203:
+          type: string
+        udf204:
+          type: string
+        udf205:
+          type: string
+        udf206:
+          type: string
+        udf207:
+          type: string
+        udf208:
+          type: string
+        udf209:
+          type: string
+        udf210:
+          type: string
+        udf211:
+          type: string
+        udf212:
+          type: string
+        udf213:
+          type: string
+        udf214:
+          type: string
+        udf215:
+          type: string
+        udf216:
+          type: string
+        udf217:
+          type: string
+        udf218:
+          type: string
+        udf219:
+          type: string
+        udf220:
+          type: string
+        udf221:
+          type: string
+        udf222:
+          type: string
+        udf223:
+          type: string
+        udf224:
+          type: string
+        udf225:
+          type: string
+        udf226:
+          type: string
+        udf227:
+          type: string
+        udf228:
+          type: string
+        udf229:
+          type: string
+        udf230:
+          type: string
+        udf231:
+          type: string
+        udf232:
+          type: string
+        udf233:
+          type: string
+        udf234:
+          type: string
+        udf235:
+          type: string
+        udf236:
+          type: string
+        udf237:
+          type: string
+        udf238:
+          type: string
+        udf239:
+          type: string
+        udf240:
+          type: string
+        udf241:
+          type: string
+        udf242:
+          type: string
+        udf243:
+          type: string
+        udf244:
+          type: string
+        udf245:
+          type: string
+        udf246:
+          type: string
+        udf247:
+          type: string
+        udf248:
+          type: string
+        udf249:
+          type: string
+        udf250:
+          type: string
+        udf251:
+          type: string
+        udf252:
+          type: string
+        udf253:
+          type: string
+        udf254:
+          type: string
+        udf255:
+          type: string
+        udf256:
+          type: string
+        udf257:
+          type: string
+        udf258:
+          type: string
+        udf259:
+          type: string
+        udf260:
+          type: string
+        udf261:
+          type: string
+        udf262:
+          type: string
+        udf263:
+          type: string
+        udf264:
+          type: string
+        udf265:
+          type: string
+        udf266:
+          type: string
+        udf267:
+          type: string
+        udf268:
+          type: string
+        udf269:
+          type: string
+        udf270:
+          type: string
+        udf271:
+          type: string
+        udf272:
+          type: string
+        udf273:
+          type: string
+        udf274:
+          type: string
+        udf275:
+          type: string
+        udf276:
+          type: string
+        udf277:
+          type: string
+        udf278:
+          type: string
+        udf279:
+          type: string
+        udf280:
+          type: string
+        udf281:
+          type: string
+        udf282:
+          type: string
+        udf283:
+          type: string
+        udf284:
+          type: string
+        udf285:
+          type: string
+        udf286:
+          type: string
+        udf287:
+          type: string
+        udf288:
+          type: string
+        udf289:
+          type: string
+        udf290:
+          type: string
+        udf291:
+          type: string
+        udf292:
+          type: string
+        udf293:
+          type: string
+        udf294:
+          type: string
+        udf295:
+          type: string
+        udf296:
+          type: string
+        udf297:
+          type: string
+        udf298:
+          type: string
+        udf299:
+          type: string
+        udf300:
+          type: string
+    Antivirus:
+      type: object
+      description: Device antivirus data
+      properties:
+        antivirusProduct:
+          type: string
+        antivirusStatus:
+          type: string
+          enum:
+          - RunningAndUpToDate
+          - RunningAndNotUpToDate
+          - NotRunning
+          - NotDetected
+    Account:
+      type: object
+      description: Account data
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        descriptor:
+          $ref: '#/components/schemas/Account Descriptor'
+        uid:
+          type: string
+        currency:
+          type: string
+        devicesStatus:
+          $ref: '#/components/schemas/AccountDevicesStatus'
+    AlertContext:
+      discriminator:
+        propertyName: '@class'
+      properties:
+        '@class':
+          type: string
+      required:
+      - '@class'
+    Alert:
+      type: object
+      description: Alert data
+      properties:
+        alertUid:
+          type: string
+        priority:
+          type: string
+          enum:
+          - Critical
+          - High
+          - Moderate
+          - Low
+          - Information
+          - Unknown
+        diagnostics:
+          type: string
+        resolved:
+          type: boolean
+        resolvedBy:
+          type: string
+        resolvedOn:
+          type: string
+          format: date-time
+        muted:
+          type: boolean
+        ticketNumber:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        alertMonitorInfo:
+          $ref: '#/components/schemas/AlertMonitorInfo'
+        alertContext:
+          oneOf:
+          - $ref: '#/components/schemas/ActionContext'
+          - $ref: '#/components/schemas/AntivirusContext'
+          - $ref: '#/components/schemas/BackupManagementContext'
+          - $ref: '#/components/schemas/CustomSNMPContext'
+          - $ref: '#/components/schemas/DiskHealthContext'
+          - $ref: '#/components/schemas/DiskUsageContext'
+          - $ref: '#/components/schemas/EndpointSecurityThreatContext'
+          - $ref: '#/components/schemas/EndpointSecurityWindowsDefenderContext'
+          - $ref: '#/components/schemas/EventLogContext'
+          - $ref: '#/components/schemas/FanContext'
+          - $ref: '#/components/schemas/FileSystemContext'
+          - $ref: '#/components/schemas/NetworkMonitorContext'
+          - $ref: '#/components/schemas/OnlineOfflineStatusContext'
+          - $ref: '#/components/schemas/PatchContext'
+          - $ref: '#/components/schemas/PingContext'
+          - $ref: '#/components/schemas/PrinterContext'
+          - $ref: '#/components/schemas/PsuContext'
+          - $ref: '#/components/schemas/RansomWareContext'
+          - $ref: '#/components/schemas/ResourceUsageContext'
+          - $ref: '#/components/schemas/SNMPProbeContext'
+          - $ref: '#/components/schemas/ScriptContext'
+          - $ref: '#/components/schemas/SecCenterContext'
+          - $ref: '#/components/schemas/SecurityManagementContext'
+          - $ref: '#/components/schemas/StatusContext'
+          - $ref: '#/components/schemas/TemperatureContext'
+          - $ref: '#/components/schemas/WindowsPerformanceContext'
+          - $ref: '#/components/schemas/WmiContext'
+        alertSourceInfo:
+          $ref: '#/components/schemas/AlertSourceInfo'
+        responseActions:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResponseAction'
+        autoresolveMins:
+          type: integer
+          format: int32
+    AntivirusContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          status:
+            type: string
+            enum:
+            - NOTDETECTED
+            - NOTRUNNING
+            - RUNNINGNOTUPTODATE
+          productName:
+            type: string
+    Variable Creation Request:
+      type: object
+      description: Variable creation data
+      properties:
+        name:
+          type: string
+          description: Variable name
+        value:
+          type: string
+          description: Variable value
+        masked:
+          type: boolean
+          description: Variable masking (hiding)
+    PatchContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          patchUid:
+            type: string
+          policyUid:
+            type: string
+          result:
+            type: string
+          info:
+            type: string
+    Variable:
+      type: object
+      description: Variable data
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        value:
+          type: string
+        masked:
+          type: boolean
+    EndpointSecurityThreatContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          esAlertId:
+            type: string
+          description:
+            type: string
+    PsuContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          reason:
+            type: string
+          type:
+            type: string
+            enum:
+            - CPU
+            - MEMORY
+            - TEMPERATURE
+            - FAN
+            - DISKHEALTH
+            - PSU
+            - SNMP_THROUGHPUT
+    DevicesStatus:
+      type: object
+      description: Devices Status
+      properties:
+        numberOfDevices:
+          type: integer
+          format: int64
+        numberOfOnlineDevices:
+          type: integer
+          format: int64
+        numberOfOfflineDevices:
+          type: integer
+          format: int64
+    ProxySettings:
+      type: object
+      description: Site's Proxy Settings
+      properties:
+        host:
+          type: string
+        password:
+          type: string
+        port:
+          type: integer
+          format: int32
+        type:
+          type: string
+          enum:
+          - http
+          - socks4
+          - socks5
+        username:
+          type: string
+    ScriptContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          samples:
+            type: object
+            additionalProperties:
+              type: string
+    Device:
+      type: object
+      description: Device data
+      properties:
+        id:
+          type: integer
+          format: int64
+        uid:
+          type: string
+        siteId:
+          type: integer
+          format: int64
+        siteUid:
+          type: string
+        siteName:
+          type: string
+        deviceType:
+          $ref: '#/components/schemas/DevicesType'
+        hostname:
+          type: string
+        intIpAddress:
+          type: string
+        operatingSystem:
+          type: string
+        lastLoggedInUser:
+          type: string
+        domain:
+          type: string
+        cagVersion:
+          type: string
+        displayVersion:
+          type: string
+        extIpAddress:
+          type: string
+        description:
+          type: string
+        a64Bit:
+          type: boolean
+        rebootRequired:
+          type: boolean
+        online:
+          type: boolean
+        suspended:
+          type: boolean
+        deleted:
+          type: boolean
+        lastSeen:
+          type: string
+          format: date-time
+        lastReboot:
+          type: string
+          format: date-time
+        lastAuditDate:
+          type: string
+          format: date-time
+        creationDate:
+          type: string
+          format: date-time
+        udf:
+          $ref: '#/components/schemas/Udf'
+        snmpEnabled:
+          type: boolean
+        deviceClass:
+          type: string
+          enum:
+          - device
+          - printer
+          - esxihost
+          - rmmnetworkdevice
+          - unknown
+        portalUrl:
+          type: string
+        warrantyDate:
+          type: string
+        antivirus:
+          $ref: '#/components/schemas/Antivirus'
+        patchManagement:
+          $ref: '#/components/schemas/PatchManagement'
+        softwareStatus:
+          type: string
+        webRemoteUrl:
+          type: string
+        networkProbe:
+          type: boolean
+        onboardedViaNetworkMonitor:
+          type: boolean
+    DnetSiteMappingsPage:
+      type: object
+      description: Dnet site mappings page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        dnetSiteMappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/DnetSiteMappingsDto'
+    PingContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          instanceName:
+            type: string
+          roundtripTime:
+            type: integer
+            format: int32
+          reasons:
+            type: array
+            items:
+              type: string
+    SitesPage:
+      type: object
+      description: Sites page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        sites:
+          type: array
+          items:
+            $ref: '#/components/schemas/Site'
+    EndpointSecurityWindowsDefenderContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          esAlertId:
+            type: string
+          description:
+            type: string
+    AlertsPage:
+      type: object
+      description: Alerts page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        alerts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+    DiskHealthContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          reason:
+            type: string
+          type:
+            type: string
+            enum:
+            - CPU
+            - MEMORY
+            - TEMPERATURE
+            - FAN
+            - DISKHEALTH
+            - PSU
+            - SNMP_THROUGHPUT
+    Variable Update Request:
+      type: object
+      description: Variable update data
+      properties:
+        name:
+          type: string
+          description: Variable name
+        value:
+          type: string
+          description: Variable value
+    ResourceUsageContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          processName:
+            type: string
+          sample:
+            type: number
+            format: float
+          type:
+            type: string
+            enum:
+            - CPU
+            - MEMORY
+            - TEMPERATURE
+            - FAN
+            - DISKHEALTH
+            - PSU
+            - SNMP_THROUGHPUT
+    SecCenterContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          productName:
+            type: string
+          alertType:
+            type: string
+            enum:
+            - DISABLED
+            - NOT_UPTODATE
+    WindowsPerformanceContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          value:
+            type: number
+            format: float
+    DiskUsageContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          diskName:
+            type: string
+          totalVolume:
+            type: number
+            format: float
+          freeSpace:
+            type: number
+            format: float
+          unitOfMeasure:
+            type: string
+            enum:
+            - PERCENT
+            - USED
+            - FREE
+          diskNameDesignation:
+            type: string
+            enum:
+            - ANY_VOLUME
+            - ALL_VOLUMES
+            - SINGLE_VOLUME
+    ComponentsPage:
+      type: object
+      description: Components page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/Component'
+    BackupManagementContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          errorMessage:
+            type: string
+          timeout:
+            type: integer
+            format: int32
+    NetworkMonitorContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          description:
+            type: string
+    ComponentVariable:
+      type: object
+      description: Component's variables data
+      properties:
+        name:
+          type: string
+        defaultVal:
+          type: string
+        type:
+          type: string
+        direction:
+          type: boolean
+        description:
+          type: string
+        variablesIdx:
+          type: integer
+          format: int32
+    AuthUser:
+      type: object
+      description: Authentication user data
+      properties:
+        lastName:
+          type: string
+        firstName:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        telephone:
+          type: string
+        status:
+          type: string
+        created:
+          type: string
+          format: date-time
+        lastAccess:
+          type: string
+          format: date-time
+        disabled:
+          type: boolean
+    PatchManagement:
+      type: object
+      description: Patch management data
+      properties:
+        patchStatus:
+          type: string
+          enum:
+          - NoPolicy
+          - NoData
+          - RebootRequired
+          - InstallError
+          - ApprovedPending
+          - FullyPatched
+        patchesApprovedPending:
+          type: integer
+          format: int64
+        patchesNotApproved:
+          type: integer
+          format: int64
+        patchesInstalled:
+          type: integer
+          format: int64
+    ActionContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          packageName:
+            type: string
+          actionType:
+            type: string
+            enum:
+            - INSTALLED
+            - UNINSTALLED
+            - VERSION_CHANGED
+          prevVersion:
+            type: string
+          version:
+            type: string
+    DevicesType:
+      type: object
+      description: Devices Type
+      properties:
+        category:
+          type: string
+        type:
+          type: string
+    PaginationData:
+      type: object
+      description: Pagination data
+      properties:
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string
+    AlertSourceInfo:
+      type: object
+      description: Alert source information data
+      properties:
+        deviceUid:
+          type: string
+        deviceName:
+          type: string
+        siteUid:
+          type: string
+        siteName:
+          type: string
+    FanContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          reason:
+            type: string
+          type:
+            type: string
+            enum:
+            - CPU
+            - MEMORY
+            - TEMPERATURE
+            - FAN
+            - DISKHEALTH
+            - PSU
+            - SNMP_THROUGHPUT
+    UsersPage:
+      type: object
+      description: Users page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuthUser'
+    SecurityManagementContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          status:
+            type: integer
+            format: int32
+          productName:
+            type: string
+          infoTime:
+            type: integer
+            format: int32
+          virusName:
+            type: string
+          infectedFiles:
+            type: array
+            items:
+              type: string
+          productNotUpdatedForDays:
+            type: integer
+            format: int32
+          systemRemainsInfectedForHours:
+            type: integer
+            format: int32
+          expiryLicenseForDays:
+            type: integer
+            format: int32
+    AccountDevicesStatus:
+      type: object
+      description: Account Devices Status
+      properties:
+        numberOfDevices:
+          type: integer
+          format: int64
+        numberOfOnlineDevices:
+          type: integer
+          format: int64
+        numberOfOfflineDevices:
+          type: integer
+          format: int64
+        numberOfOnDemandDevices:
+          type: integer
+          format: int64
+        numberOfManagedDevices:
+          type: integer
+          format: int64
+    FileSystemContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          sample:
+            type: number
+            format: float
+          threshold:
+            type: number
+            format: float
+          path:
+            type: string
+          objectType:
+            type: string
+            enum:
+            - FILE
+            - DIRECTORY
+          condition:
+            type: string
+            enum:
+            - ABOVE_THRESHOLD
+            - BELOW_THRESHOLD
+            - REMOVED
+            - CREATED
+    Site:
+      type: object
+      description: Site data
+      properties:
+        id:
+          type: integer
+          format: int64
+        uid:
+          type: string
+          description: Unique alphanumeric UID of this site
+        accountUid:
+          type: string
+          description: Unique alphanumeric UID of the account to which this site belongs
+        name:
+          type: string
+        description:
+          type: string
+        notes:
+          type: string
+        onDemand:
+          type: boolean
+        splashtopAutoInstall:
+          type: boolean
+        proxySettings:
+          $ref: '#/components/schemas/ProxySettings'
+        devicesStatus:
+          $ref: '#/components/schemas/DevicesStatus'
+        autotaskCompanyName:
+          type: string
+        autotaskCompanyId:
+          type: string
+        portalUrl:
+          type: string
+    VariablesPage:
+      type: object
+      description: Variables page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variable'
+          uniqueItems: true
+    StatusContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          processName:
+            type: string
+          status:
+            type: string
+            enum:
+            - STOPPED
+            - STARTPENDING
+            - STOPPENDING
+            - RUNNING
+            - CONTINUEPENDING
+            - PAUSEPENDING
+            - PAUSED
+    Account Descriptor:
+      type: object
+      description: Account description data
+      properties:
+        bilingEmail:
+          type: string
+        deviceLimit:
+          type: integer
+          format: int32
+        timeZone:
+          type: string
+    WmiContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          value:
+            type: string
+    PrinterContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          ipAddress:
+            type: string
+          macAddress:
+            type: string
+          markerSupplyIndex:
+            type: integer
+            format: int32
+          currentLevel:
+            type: integer
+            format: int32
+    OnlineOfflineStatusContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          status:
+            type: string
+            enum:
+            - ONLINE
+            - OFFLINE
+    RansomWareContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          state:
+            type: integer
+            format: int32
+          confidenceFactor:
+            type: integer
+            format: int32
+          affectedDirectories:
+            type: array
+            items:
+              type: string
+          watchPaths:
+            type: array
+            items:
+              type: string
+          rwextension:
+            type: string
+          metaAlertTime:
+            type: string
+            format: date-time
+          alertTime:
+            type: string
+            format: date-time
+    Component:
+      type: object
+      description: Component data
+      properties:
+        id:
+          type: integer
+          format: int64
+        credentialsRequired:
+          type: boolean
+        uid:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        categoryCode:
+          type: string
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/ComponentVariable'
+    SNMPProbeContext:
+      allOf:
+      - $ref: '#/components/schemas/AlertContext'
+      - type: object
+        properties:
+          ipAddress:
+            type: string
+          OID:
+            type: string
+          ruleName:
+            type: string
+          responseValue:
+            type: string
+          deviceName:
+            type: string
+          monitorName:
+            type: string
+          oid:
+            type: string
+    ResponseAction:
+      type: object
+      properties:
+        actionTime:
+          type: string
+          format: date-time
+        actionType:
+          type: string
+          enum:
+          - EMAIL_SENT
+          - EMAIL_SEND_ERROR
+          - TICKET_PENDING
+          - TICKET_CREATED
+          - TICKET_CREATION_ERROR
+          - TICKET_CLOSED_CALL
+          - COMPONENT
+          - WEBHOOK_EXECUTED
+          - WEBHOOK_EXECUTION_ERROR
+        description:
+          type: string
+        actionReference:
+          type: string
+        actionReferenceInt:
+          type: string

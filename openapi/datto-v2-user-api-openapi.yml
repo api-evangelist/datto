@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: Datto RMM /v2/account /v2/account /v2/user API
+  description: Datto RMM (Remote Monitoring and Management) REST API
+  license:
+    name: '©Datto, Inc. - All rights reserved. '
+    url: http://www.datto.com/
+  version: 2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)
+servers:
+- url: https://concord-api.centrastage.net/api
+  description: Generated server url
+tags:
+- name: /v2/user
+  description: Operations on users
+paths:
+  /v2/user/resetApiKeys:
+    post:
+      tags:
+      - /v2/user
+      summary: Resets the authenticated user's API access and secret keys.
+      operationId: resetApiKeys
+      responses:
+        '500':
+          description: Internal Server Error
+        '409':
+          description: Request aborted due to concurrent write access to this record.
+        '401':
+          description: Request can not be authorized.
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AuthUserKey'
+components:
+  schemas:
+    AuthUserKey:
+      type: object
+      description: Authentication user keys
+      properties:
+        apiAccessKey:
+          type: string
+        apiSecretKey:
+          type: string
+        userName:
+          type: string
