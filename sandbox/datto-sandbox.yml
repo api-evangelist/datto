@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.datto.com/developers/
+note: >-
+  The Datto Developer Program provides sandbox environments to enrolled vendors
+  as a program benefit ("24x5 technical support and sandbox environments"). The
+  sandbox is provisioned per developer-program partner rather than exposed as a
+  public self-serve test mode; Datto does not publish standing test credentials,
+  magic test identifiers, or fixture values on its public pages. No fabricated
+  test values are recorded here.
+availability: developer-program
+self_serve_public_test_mode: false
+access:
+  via: Datto Developer Program enrollment
+  signup: https://www.datto.com/developers/join
+test_credentials: none-published
+magic_test_values: none-published

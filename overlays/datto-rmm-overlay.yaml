@@ -1,0 +1,26 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Datto RMM API
+  version: 1.0.0
+extends: openapi/datto-rmm-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: datto
+    x-apievangelist-review-date: '2026-07-18'
+    x-apievangelist-auth: OAuth 2.0 bearer (API key/secret -> 100h token); not declared in spec securitySchemes
+    x-apievangelist-rate-limit: 600 read / 100 write per rolling 60s (GET /v2/system/request_rate)
+    x-apievangelist-pagination: page/max params, max 250 results, pageDetails response field
+    x-apievangelist-regional-hosts: concord/merlot/pinotage/vidal/zinfandel/syrah -api.centrastage.net
+- target: $.components.securitySchemes
+  update:
+    OAuth2:
+      type: oauth2
+      description: >-
+        Documented in Datto RMM API v2 help but absent from the generated spec.
+        Bearer access token minted from an API key + secret via the OAuth token
+        endpoint; token TTL 100 hours.
+      flows:
+        password:
+          tokenUrl: https://concord-api.centrastage.net/auth/oauth/token
+          scopes: {}

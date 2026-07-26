@@ -1,0 +1,51 @@
+generated: '2026-07-18'
+method: searched
+source: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+note: >-
+  Cross-cutting request/response semantics for the Datto RMM v2 REST API,
+  captured from the API v2 documentation and derived from the OpenAPI. Cross-link
+  errors/datto-problem-types.yml, rate-limits/datto-rate-limits.yml,
+  authentication/datto-authentication.yml, lifecycle/datto-lifecycle.yml.
+authentication:
+  style: OAuth 2.0 Bearer token (100-hour access token from API key/secret)
+  ref: authentication/datto-authentication.yml
+base_url:
+  pattern: https://[platform]-api.centrastage.net/api
+  note: >-
+    Regional platform host is account-specific (concord, merlot, pinotage,
+    vidal, zinfandel, syrah). The correct host is shown in the RMM UI Setup page.
+versioning:
+  scheme: uri-path
+  current: v2
+  path_prefix: /v2
+  note: v1 of the API is deprecated in favor of v2.
+pagination:
+  style: page-number
+  request_params:
+  - page
+  - max
+  max_page_size: 250
+  response_field: pageDetails
+  note: >-
+    Responses return at most 250 records; pageDetails carries count and next/prev
+    page links. GET /v2/system/pagination reports the configured limits.
+filtering:
+  note: >-
+    List endpoints accept filter query params (e.g. filterId, hostname, deviceType,
+    siteName) applying LIKE/partial matching; a filterId, when supplied, exclusively
+    determines results.
+timestamps:
+  format: Unix epoch milliseconds
+idempotency:
+  supported: false
+  note: >-
+    No Idempotency-Key header or param is documented. Mutating operations rely on
+    HTTP method semantics (PUT create/replace, POST update, DELETE). Do not assume
+    safe automatic retries on non-idempotent POST operations.
+error_handling:
+  style: standard HTTP status codes with JSON body (not RFC 9457)
+  ref: errors/datto-problem-types.yml
+rate_limiting:
+  ref: rate-limits/datto-rate-limits.yml
+  introspection: GET /v2/system/request_rate
+  exceeded_status: 429

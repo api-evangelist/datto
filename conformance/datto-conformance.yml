@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/datto-rmm-openapi.json
+note: >-
+  Cross-cutting standards posture for the Datto RMM API, derived from the OpenAPI
+  and the API v2 documentation. Datto's corporate compliance program (Kaseya
+  Trust Center) is referenced as a link, not asserted here as a certification.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    API v2 documentation specifies OAuth 2.0 access tokens (API key/secret ->
+    bearer token, 100h TTL). Note the OpenAPI does not itself declare
+    securitySchemes.
+- id: openapi-3.1
+  conforms: true
+  evidence: spec declares openapi 3.1.0
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Errors return standard HTTP status codes with application/json bodies, not
+    application/problem+json.
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: no Sunset/Deprecation headers documented for v2 operations
+- id: pagination
+  conforms: true
+  evidence: page/max query params, max 250 results, pageDetails response field
+- id: idempotency
+  conforms: false
+  evidence: no Idempotency-Key header/param documented
+- id: rate-limiting
+  conforms: true
+  evidence: 600 read / 100 write per rolling 60s; GET /v2/system/request_rate introspection; 429 on exceed
+- id: rest-json
+  conforms: true
+  evidence: resource-oriented /v2 paths, JSON request/response bodies

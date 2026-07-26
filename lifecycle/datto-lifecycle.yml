@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+note: >-
+  Versioning, deprecation, and operational-status posture for the Datto RMM API,
+  captured from the API v2 documentation and the public Datto status page.
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+deprecation:
+  policy: >-
+    API v1 is deprecated in favor of v2; Datto directs integrators to migrate to
+    the v2 REST API. No RFC 8594 Sunset/Deprecation response headers are
+    documented for individual v2 operations.
+  deprecated_versions:
+  - v1
+  sunset_header: false
+status_page: https://status.datto.com/
+health_endpoints:
+- openapi/datto-rmm-openapi.json#getStatus
+- openapi/datto-rmm-openapi.json#getPaginationConfigurations
+deprecated_operations: []

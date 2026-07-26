@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/datto-rmm-openapi.json
+note: >-
+  Packaged Agent Skills for the Datto RMM v2 API. Every step is grounded in a real
+  operationId verified against openapi/datto-rmm-openapi.json.
+skills:
+- file: datto-device-inventory.md
+  name: Datto RMM device inventory
+  api: openapi/datto-rmm-openapi.json
+  operations: [getSites, getSiteDevices, getByUid, getDeviceAudit, getDeviceAuditSoftware]
+- file: datto-alert-triage.md
+  name: Datto RMM alert triage
+  api: openapi/datto-rmm-openapi.json
+  operations: [getUserAccountOpenAlerts, getSiteOpenAlerts, getAlert, muteAlert, resolveAlert, unmuteAlert]
+- file: datto-run-quick-job.md
+  name: Datto RMM run a quick job
+  api: openapi/datto-rmm-openapi.json
+  operations: [getComponents, createQuickJob, get_1, getJobResults, getStdOut, getStdErr]

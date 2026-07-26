@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/datto-rmm-openapi.json
+format: http-status
+note: Datto RMM returns standard HTTP status codes with a plain JSON body (not RFC 9457 application/problem+json).
+  Titles are HTTP reason phrases; descriptions are harvested verbatim from the OpenAPI response objects.
+error_envelope: application/json (endpoint response schema; no dedicated Problem schema declared)
+problems:
+- status: 400
+  title: Bad Request
+  descriptions:
+  - Request data is invalid.
+  - Request is invalid.
+  - Request parameters are invalid.
+  - The device identified by the given device MAC address is not of class device.
+  - The device identified by the given device UID is not of class ESXi host.
+  - The device identified by the given device UID is not of class device.
+  occurrences: 18
+- status: 401
+  title: Unauthorized
+  descriptions:
+  - Request can not be authorized.
+  - Request cannot be authorized.
+  occurrences: 54
+- status: 403
+  title: Forbidden
+  descriptions:
+  - Authenticated user doesn't have access to this resource.
+  occurrences: 52
+- status: 404
+  title: Not Found
+  descriptions:
+  - Device and/or site not found.
+  - Device was not found.
+  - Filter was not found.
+  - Job or device was not found.
+  - Job was not found.
+  - Printer was not found.
+  occurrences: 37
+- status: 409
+  title: Conflict
+  descriptions:
+  - Conflict
+  - Request aborted due to concurrent write access to this record.
+  occurrences: 57
+- status: 500
+  title: Internal Server Error
+  descriptions:
+  - Internal Server Error
+  occurrences: 57

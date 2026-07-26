@@ -1,0 +1,32 @@
+{
+  "provider": "datto",
+  "sources": [
+    "datto-v2-account-api-openapi.yml",
+    "datto-v2-activity-logs-api-openapi.yml",
+    "datto-v2-alert-api-openapi.yml",
+    "datto-v2-audit-api-openapi.yml",
+    "datto-v2-device-api-openapi.yml",
+    "datto-v2-filter-api-openapi.yml",
+    "datto-v2-job-api-openapi.yml",
+    "datto-v2-site-api-openapi.yml",
+    "datto-v2-system-api-openapi.yml",
+    "datto-v2-user-api-openapi.yml"
+  ],
+  "outputs": [
+    "datto-v2-account-api-openapi.yml",
+    "datto-v2-activity-logs-api-openapi.yml",
+    "datto-v2-alert-api-openapi.yml",
+    "datto-v2-audit-api-openapi.yml",
+    "datto-v2-device-api-openapi.yml",
+    "datto-v2-filter-api-openapi.yml",
+    "datto-v2-job-api-openapi.yml",
+    "datto-v2-site-api-openapi.yml",
+    "datto-v2-system-api-openapi.yml",
+    "datto-v2-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

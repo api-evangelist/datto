@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+docs: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+note: >-
+  Datto RMM enforces a rolling 60-second request-rate limit, separated by read
+  (query) versus write operations. Clients can inspect their current consumption
+  via GET /v2/system/request_rate. Exceeding the limit returns HTTP 429.
+rate_limits:
+- name: Query (read) requests
+  scope: per API user
+  limit_count: 600
+  window_seconds: 60
+  applies_to: GET requests
+- name: Write requests
+  scope: per API user
+  limit_count: 100
+  window_seconds: 60
+  applies_to: PUT / POST / DELETE requests
+introspection_endpoint: /v2/system/request_rate
+exceeded_status: 429

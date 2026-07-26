@@ -1,0 +1,303 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/datto-rmm-openapi.json
+note: Candidate MCP tool list derived one-per-operation from the Datto RMM OpenAPI. No official hosted
+  Datto RMM MCP server was found as of this pass; this is a governance starting point, not a published
+  server.
+server:
+  name: datto-rmm
+  transport: stdio
+tool_count: 57
+tools:
+- name: create
+  description: Creates a new site in the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#create
+  method: PUT
+  path: /v2/site
+- name: createSiteVariable
+  description: Creates a site variable in the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#createSiteVariable
+  method: PUT
+  path: /v2/site/{siteUid}/variable
+- name: moveDevice
+  description: Moves a device from one site to another site.
+  source_operation: openapi/datto-rmm-openapi.json#moveDevice
+  method: PUT
+  path: /v2/device/{deviceUid}/site/{siteUid}
+- name: createQuickJob
+  description: Creates a quick job on the device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#createQuickJob
+  method: PUT
+  path: /v2/device/{deviceUid}/quickjob
+- name: createAccountVariable
+  description: Creates an account variable
+  source_operation: openapi/datto-rmm-openapi.json#createAccountVariable
+  method: PUT
+  path: /v2/account/variable
+- name: resetApiKeys
+  description: Resets the authenticated user's API access and secret keys.
+  source_operation: openapi/datto-rmm-openapi.json#resetApiKeys
+  method: POST
+  path: /v2/user/resetApiKeys
+- name: getSite
+  description: Fetches data of the site (including total number of devices) identified by the given site
+    Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSite
+  method: GET
+  path: /v2/site/{siteUid}
+- name: update
+  description: Updates the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#update
+  method: POST
+  path: /v2/site/{siteUid}
+- name: updateSiteVariable
+  description: Updates the site variable identified by the given site Uid and variable Id.
+  source_operation: openapi/datto-rmm-openapi.json#updateSiteVariable
+  method: POST
+  path: /v2/site/{siteUid}/variable/{variableId}
+- name: deleteSiteVariable
+  description: Deletes the site variable identified by the given site Uid and variable Id.
+  source_operation: openapi/datto-rmm-openapi.json#deleteSiteVariable
+  method: DELETE
+  path: /v2/site/{siteUid}/variable/{variableId}
+- name: updateProxy
+  description: Creates/updates the proxy settings for the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#updateProxy
+  method: POST
+  path: /v2/site/{siteUid}/settings/proxy
+- name: deleteProxy
+  description: Deletes site proxy settings for the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#deleteProxy
+  method: DELETE
+  path: /v2/site/{siteUid}/settings/proxy
+- name: setWarrantyData
+  description: Sets the warranty of a device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#setWarrantyData
+  method: POST
+  path: /v2/device/{deviceUid}/warranty
+- name: setUdfFields
+  description: Sets the user defined fields of a device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#setUdfFields
+  method: POST
+  path: /v2/device/{deviceUid}/udf
+- name: unmuteAlert
+  description: Alerts can no longer be un-muted, as of the 8.9.0 release.
+  source_operation: openapi/datto-rmm-openapi.json#unmuteAlert
+  method: POST
+  path: /v2/alert/{alertUid}/unmute
+- name: resolveAlert
+  description: Resolves the alert identified by the given alert Uid.
+  source_operation: openapi/datto-rmm-openapi.json#resolveAlert
+  method: POST
+  path: /v2/alert/{alertUid}/resolve
+- name: muteAlert
+  description: Alerts can no longer be muted, as of the 8.9.0 release.
+  source_operation: openapi/datto-rmm-openapi.json#muteAlert
+  method: POST
+  path: /v2/alert/{alertUid}/mute
+- name: updateAccountVariable
+  description: Updates the account variable identified by the given variable Id.
+  source_operation: openapi/datto-rmm-openapi.json#updateAccountVariable
+  method: POST
+  path: /v2/account/variable/{variableId}
+- name: deleteAccountVariable
+  description: Deletes the account variable identified by the given variable Id.
+  source_operation: openapi/datto-rmm-openapi.json#deleteAccountVariable
+  method: DELETE
+  path: /v2/account/variable/{variableId}
+- name: getStatus
+  description: Fetches the system status (start date, status and version).
+  source_operation: openapi/datto-rmm-openapi.json#getStatus
+  method: GET
+  path: /v2/system/status
+- name: get
+  description: Fetches the request rate status for the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#get
+  method: GET
+  path: /v2/system/request_rate
+- name: getPaginationConfigurations
+  description: Fetches the pagination configurations.
+  source_operation: openapi/datto-rmm-openapi.json#getPaginationConfigurations
+  method: GET
+  path: /v2/system/pagination
+- name: getSiteVariables
+  description: Fetches the variables of the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteVariables
+  method: GET
+  path: /v2/site/{siteUid}/variables
+- name: getSiteSettings
+  description: Fetches settings of the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteSettings
+  method: GET
+  path: /v2/site/{siteUid}/settings
+- name: getSiteDeviceFilters
+  description: Fetches the site device filters (that the user can see with administrator role) of the
+    site identified by the given site
+  source_operation: openapi/datto-rmm-openapi.json#getSiteDeviceFilters
+  method: GET
+  path: /v2/site/{siteUid}/filters
+- name: getSiteDevices
+  description: Fetches the devices records of the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteDevices
+  method: GET
+  path: /v2/site/{siteUid}/devices
+- name: getSiteDevicesWithNetworkInterface
+  description: Fetches the shortened devices records with network interface information of the site identified
+    by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteDevicesWithNetworkInterface
+  method: GET
+  path: /v2/site/{siteUid}/devices/network-interface
+- name: getSiteResolvedAlerts
+  description: Fetches the resolved alerts of the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteResolvedAlerts
+  method: GET
+  path: /v2/site/{siteUid}/alerts/resolved
+- name: getSiteOpenAlerts
+  description: Fetches the open alerts of the site identified by the given site Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getSiteOpenAlerts
+  method: GET
+  path: /v2/site/{siteUid}/alerts/open
+- name: get_1
+  description: Fetches data of the job identified by the given job Uid.
+  source_operation: openapi/datto-rmm-openapi.json#get_1
+  method: GET
+  path: /v2/job/{jobUid}
+- name: getJobResults
+  description: Fetches job results of the job identified by the job Uid for device identified by the device
+    Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getJobResults
+  method: GET
+  path: /v2/job/{jobUid}/results/{deviceUid}
+- name: getStdOut
+  description: Fetches data of the job's StdOut identified by the given job Uid and device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getStdOut
+  method: GET
+  path: /v2/job/{jobUid}/results/{deviceUid}/stdout
+- name: getStdErr
+  description: Fetches data of the job's StdErr identified by the given job Uid and device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getStdErr
+  method: GET
+  path: /v2/job/{jobUid}/results/{deviceUid}/stderr
+- name: getJobComponents
+  description: Fetches components of the job identified by the given job Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getJobComponents
+  method: GET
+  path: /v2/job/{jobUid}/components
+- name: getDefaultsFilters
+  description: Fetches the default device filters.
+  source_operation: openapi/datto-rmm-openapi.json#getDefaultsFilters
+  method: GET
+  path: /v2/filter/default-filters
+- name: getCustomFilters
+  description: Fetches the custom device filters for the user (using administrator role).
+  source_operation: openapi/datto-rmm-openapi.json#getCustomFilters
+  method: GET
+  path: /v2/filter/custom-filters
+- name: getByUid
+  description: Fetches data of the device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getByUid
+  method: GET
+  path: /v2/device/{deviceUid}
+- name: getDeviceResolvedAlerts
+  description: Fetches the resolved alerts of the device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getDeviceResolvedAlerts
+  method: GET
+  path: /v2/device/{deviceUid}/alerts/resolved
+- name: getDeviceOpenAlerts
+  description: Fetches the open alerts of the device identified by the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getDeviceOpenAlerts
+  method: GET
+  path: /v2/device/{deviceUid}/alerts/open
+- name: getByMacAddress
+  description: 'Fetches data of the device(s) identified by the given MAC address in format: XXXXXXXXXXXX'
+  source_operation: openapi/datto-rmm-openapi.json#getByMacAddress
+  method: GET
+  path: /v2/device/macAddress/{macAddress}
+- name: getById
+  description: Fetches data of the device identified by the given device Id.
+  source_operation: openapi/datto-rmm-openapi.json#getById
+  method: GET
+  path: /v2/device/id/{deviceId}
+- name: getPrinterAudit
+  description: Fetches audit data of the printer identified the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getPrinterAudit
+  method: GET
+  path: /v2/audit/printer/{deviceUid}
+- name: getEsxiHostAudit
+  description: Fetches audit data of the ESXi host identified the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getEsxiHostAudit
+  method: GET
+  path: /v2/audit/esxihost/{deviceUid}
+- name: getDeviceAudit
+  description: Fetches audit data of the generic device identified the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getDeviceAudit
+  method: GET
+  path: /v2/audit/device/{deviceUid}
+- name: getDeviceAuditSoftware
+  description: Fetches audited software of the generic device identified the given device Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getDeviceAuditSoftware
+  method: GET
+  path: /v2/audit/device/{deviceUid}/software
+- name: getDeviceAuditByMacAddress
+  description: 'Fetches audit data of the generic device(s) identified the given MAC address in format:
+    XXXXXXXXXXXX'
+  source_operation: openapi/datto-rmm-openapi.json#getDeviceAuditByMacAddress
+  method: GET
+  path: /v2/audit/device/macAddress/{macAddress}
+- name: getAlert
+  description: Fetches data of the alert identified by the given alert Uid.
+  source_operation: openapi/datto-rmm-openapi.json#getAlert
+  method: GET
+  path: /v2/alert/{alertUid}
+- name: getActivities
+  description: Fetches the activity logs.
+  source_operation: openapi/datto-rmm-openapi.json#getActivities
+  method: GET
+  path: /v2/activity-logs
+- name: getUserAccount
+  description: Fetches the authenticated user's account data.
+  source_operation: openapi/datto-rmm-openapi.json#getUserAccount
+  method: GET
+  path: /v2/account
+- name: getAccountVariables
+  description: Fetches the account variables.
+  source_operation: openapi/datto-rmm-openapi.json#getAccountVariables
+  method: GET
+  path: /v2/account/variables
+- name: getUsers
+  description: Fetches the authentication users records of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getUsers
+  method: GET
+  path: /v2/account/users
+- name: getSites
+  description: Fetches the site records of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getSites
+  method: GET
+  path: /v2/account/sites
+- name: getDnetSiteMappings
+  description: Fetches the sites records with its mapped dnet network id for the authenticated user's
+    account.
+  source_operation: openapi/datto-rmm-openapi.json#getDnetSiteMappings
+  method: GET
+  path: /v2/account/dnet-site-mappings
+- name: getUserAccountDevices
+  description: Fetches the devices of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getUserAccountDevices
+  method: GET
+  path: /v2/account/devices
+- name: getComponents
+  description: Fetches the components records of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getComponents
+  method: GET
+  path: /v2/account/components
+- name: getUserAccountClosedAlerts
+  description: Fetches resolved alerts of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getUserAccountClosedAlerts
+  method: GET
+  path: /v2/account/alerts/resolved
+- name: getUserAccountOpenAlerts
+  description: Fetches open alerts of the authenticated user's account.
+  source_operation: openapi/datto-rmm-openapi.json#getUserAccountOpenAlerts
+  method: GET
+  path: /v2/account/alerts/open

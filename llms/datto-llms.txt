@@ -1,0 +1,31 @@
+# Datto
+
+> Datto (part of Kaseya) is a data-protection and IT-management vendor for managed service providers. It offers business continuity and disaster recovery (SIRIS, ALTO, Endpoint Backup), SaaS Protection, Remote Monitoring and Management (Datto RMM), Autotask PSA, networking, and cybersecurity. Datto RMM publishes a versioned REST API (v2, OpenAPI 3.1) over regional CentraStage hosts, secured with OAuth 2.0, rate-limited, and paginated.
+
+## APIs
+- [Datto RMM API v2 (docs)](https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm): Manage sites, devices, alerts, jobs, audits, variables, users, and system status.
+- [Datto RMM API reference (Swagger UI)](https://concord-api.centrastage.net/api/swagger-ui/index.html): Interactive OpenAPI 3.1 reference.
+
+## Specs
+- [OpenAPI 3.1 (Datto RMM)](openapi/datto-rmm-openapi.json)
+- [OpenAPI Overlay (enhancements)](overlays/datto-rmm-overlay.yaml)
+
+## Artifacts
+- [Authentication profile](authentication/datto-authentication.yml): OAuth 2.0 bearer, API key/secret -> 100h token.
+- [Rate limits](rate-limits/datto-rate-limits.yml): 600 read / 100 write per rolling 60s.
+- [Conventions](conventions/datto-conventions.yml): pagination, versioning, error handling, timestamps.
+- [Error catalog](errors/datto-problem-types.yml): HTTP status classes derived from the spec.
+- [Lifecycle](lifecycle/datto-lifecycle.yml): v2 current, v1 deprecated, status page.
+- [Conformance](conformance/datto-conformance.yml): standards posture.
+- [Data model](data-model/datto-data-model.yml): entity-relationship graph.
+- [MCP tools (candidate)](mcp/datto-mcp.yml): 57 candidate tools derived from operations.
+- [Agent skills](skills/_index.yml): device inventory, alert triage, run a quick job.
+
+## Docs
+- [Developer Program](https://www.datto.com/developers/)
+- [Developer Program signup](https://www.datto.com/developers/join)
+- [Integrations marketplace](https://www.datto.com/integrations/)
+- [Status page](https://status.datto.com/)
+- [Trust Center (Kaseya)](https://www.kaseya.com/trust-center/)
+- [Pricing](https://www.datto.com/pricing/)
+- [Blog](https://www.datto.com/blog/)

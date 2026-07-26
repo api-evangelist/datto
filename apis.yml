@@ -1,7 +1,32 @@
 aid: datto
 name: Datto
-description: Datto is a company surfaced as a portfolio company of general-catalyst and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Datto is a data-protection and IT-management vendor for managed service
+  providers (MSPs) and internal IT teams, now part of Kaseya. Its platform spans
+  business continuity and disaster recovery (SIRIS, ALTO, Endpoint Backup),
+  SaaS Protection for Microsoft 365 and Google Workspace, Remote Monitoring and
+  Management (Datto RMM), Autotask professional services automation (PSA),
+  networking (Wi-Fi, switches, firewalls, Secure Edge), and cybersecurity
+  (Managed SOC, EDR, antivirus). Datto RMM publishes a versioned REST API (v2,
+  OpenAPI 3.1) with platform-specific regional hosts on the CentraStage
+  infrastructure, OAuth 2.0 access tokens, request-rate limiting, and paginated
+  responses, letting partners programmatically manage sites, devices, alerts,
+  jobs, audits, and account variables. Datto runs a formal Developer Program
+  offering sandbox environments, technical enablement, and an integrations
+  marketplace for vendors building on its solutions.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.datto.com/wp-content/uploads/datto-opengraph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/datto/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +36,297 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Data Protection
+- Backup
+- Disaster Recovery
+- Managed Service Providers
+- Remote Monitoring and Management
+- Endpoint Management
+- Cybersecurity
+- IT Operations
+- SaaS Protection
+apis:
+- aid: datto:datto-v2-account-api
+  name: Datto /v2/account API
+  description: Operations on accounts
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/account
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-account-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-activity-logs-api
+  name: Datto /v2/activity-logs API
+  description: Fetching RMM Activity Logs
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/activity-logs
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-activity-logs-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-alert-api
+  name: Datto /v2/alert API
+  description: Operations on alerts
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/alert
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-alert-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-audit-api
+  name: Datto /v2/audit API
+  description: Operations on audit data
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/audit
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-audit-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-device-api
+  name: Datto /v2/device API
+  description: Operations on devices
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/device
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-device-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-filter-api
+  name: Datto /v2/filter API
+  description: Operations on filters
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/filter
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-filter-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-job-api
+  name: Datto /v2/job API
+  description: Operations on jobs
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/job
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-job-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-site-api
+  name: Datto /v2/site API
+  description: Operations on sites
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/site
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-site-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-system-api
+  name: Datto /v2/system API
+  description: RMM API System operations
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/system
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-system-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+- aid: datto:datto-v2-user-api
+  name: Datto /v2/user API
+  description: Operations on users
+  humanURL: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+  baseURL: https://concord-api.centrastage.net/api
+  tags:
+  - /v2/user
+  properties:
+  - type: OpenAPI
+    url: openapi/datto-v2-user-api-openapi.yml
+  - type: APIReference
+    url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+  - type: Authentication
+    url: authentication/datto-authentication.yml
+  - type: RateLimits
+    url: rate-limits/datto-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/datto-problem-types.yml
+  - type: DataModel
+    url: data-model/datto-data-model.yml
+  - type: Conventions
+    url: conventions/datto-conventions.yml
+common:
+- type: DeveloperPortal
+  url: https://www.datto.com/developers/
+- type: Documentation
+  url: https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm
+- type: APIReference
+  url: https://concord-api.centrastage.net/api/swagger-ui/index.html
+- type: SignUp
+  url: https://www.datto.com/developers/join
+- type: Pricing
+  url: https://www.datto.com/pricing/
+- type: Support
+  url: https://www.datto.com/support/
+- type: Blog
+  url: https://www.datto.com/blog/
+- type: Integrations
+  url: https://www.datto.com/integrations/
+- type: TermsOfService
+  url: https://www.kaseya.com/legal/website-terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.kaseya.com/legal/kaseya-privacy-statement/
+- type: TrustCenter
+  url: https://www.kaseya.com/trust-center/
+- type: StatusPage
+  url: https://status.datto.com/
+- type: Authentication
+  url: authentication/datto-authentication.yml
+- type: Conventions
+  url: conventions/datto-conventions.yml
+- type: RateLimits
+  url: rate-limits/datto-rate-limits.yml
+- type: ErrorCatalog
+  url: errors/datto-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/datto-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/datto-lifecycle.yml
+- type: Conformance
+  url: conformance/datto-conformance.yml
+- type: MCPServer
+  url: mcp/datto-mcp.yml
+- type: LLMsTxt
+  url: llms/datto-llms.txt
+- type: DataModel
+  url: data-model/datto-data-model.yml
+- type: Sandbox
+  url: sandbox/datto-sandbox.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/datto-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
