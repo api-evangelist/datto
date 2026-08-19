@@ -1,0 +1,767 @@
+{
+  "item": [
+    {
+      "id": "20af84c9-735b-4c2d-9406-516b256b5d9a",
+      "name": "/v2/activity-logs",
+      "description": {
+        "content": "Fetching RMM Activity Logs",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a1120c84-d1eb-43f4-bb30-fdde8326a7dd",
+          "name": "Fetches the activity logs.",
+          "request": {
+            "name": "Fetches the activity logs.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "activity-logs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "Specifies the number of records to be returned"
+                },
+                {
+                  "disabled": false,
+                  "key": "order",
+                  "value": "<string>",
+                  "description": "Specifies the order in which records should be returned based on their creation date"
+                },
+                {
+                  "disabled": false,
+                  "key": "searchAfter",
+                  "value": "<string>",
+                  "description": "Acts as a pointer to determine the starting point for returning records from the database. It is not advised to set this parameter manually. Instead, it is recommended to utilize the 'prevPage' and 'nextPage' URLs that are returned in the response where this parameter in already included."
+                },
+                {
+                  "disabled": false,
+                  "key": "searchAfter",
+                  "value": "<string>",
+                  "description": "Acts as a pointer to determine the starting point for returning records from the database. It is not advised to set this parameter manually. Instead, it is recommended to utilize the 'prevPage' and 'nextPage' URLs that are returned in the response where this parameter in already included."
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<string>",
+                  "description": "Defines the UTC start date for fetching data. By default API returns logs from last 15 minutes. Format: yyyy-MM-ddTHH:mm:ssZ"
+                },
+                {
+                  "disabled": false,
+                  "key": "until",
+                  "value": "<string>",
+                  "description": "Defines the UTC end date for fetching data. Format: yyyy-MM-ddTHH:mm:ssZ"
+                },
+                {
+                  "disabled": false,
+                  "key": "entities",
+                  "value": "user",
+                  "description": "Filters the returned activity logs based on their type. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "categories",
+                  "value": "<string>",
+                  "description": "Filters the returned activity logs based on their category. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "categories",
+                  "value": "<string>",
+                  "description": "Filters the returned activity logs based on their category. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "actions",
+                  "value": "<string>",
+                  "description": "Filters the returned activity logs based on their action. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "actions",
+                  "value": "<string>",
+                  "description": "Filters the returned activity logs based on their action. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "siteIds",
+                  "value": "<long>",
+                  "description": "Filters the returned activity logs based on the site they were created in. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "siteIds",
+                  "value": "<long>",
+                  "description": "Filters the returned activity logs based on the site they were created in. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "userIds",
+                  "value": "<long>",
+                  "description": "Filters the returned activity logs based on the user they are associated with. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "userIds",
+                  "value": "<long>",
+                  "description": "Filters the returned activity logs based on the user they are associated with. It can take multiple values separated by comma"
+                },
+                {
+                  "disabled": false,
+                  "key": "searchQuery",
+                  "value": "<string>",
+                  "description": "Enter queries using single words, phrases, terms containing wildcards or boolean operators, fuzzy searches, grouped searches, or special characters. See <a href=\"https://rmm.datto.com/help/en/Content/3NEWUI/Analytics/ActivityLog.htm\">Activity Log</a> for more details."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5f4b0824-9b97-4fe2-be23-8aa84abd2d8d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2355,\n    \"totalCount\": 8384,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"activities\": [\n    {\n      \"id\": \"string\",\n      \"entity\": \"USER\",\n      \"category\": \"string\",\n      \"action\": \"string\",\n      \"date\": 1689072497.714,\n      \"site\": {\n        \"id\": 9043,\n        \"name\": \"string\"\n      },\n      \"deviceId\": 6971,\n      \"hostname\": \"string\",\n      \"user\": {\n        \"id\": 6203,\n        \"userName\": \"string\",\n        \"firstName\": \"string\",\n        \"lastName\": \"string\"\n      },\n      \"details\": \"string\",\n      \"hasStdOut\": false,\n      \"hasStdErr\": true\n    },\n    {\n      \"id\": \"string\",\n      \"entity\": \"DEVICE\",\n      \"category\": \"string\",\n      \"action\": \"string\",\n      \"date\": 1689072497.714,\n      \"site\": {\n        \"id\": 1658,\n        \"name\": \"string\"\n      },\n      \"deviceId\": 6028,\n      \"hostname\": \"string\",\n      \"user\": {\n        \"id\": 3926,\n        \"userName\": \"string\",\n        \"firstName\": \"string\",\n        \"lastName\": \"string\"\n      },\n      \"details\": \"string\",\n      \"hasStdOut\": false,\n      \"hasStdErr\": true\n    }\n  ],\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a7424b02-50ea-4216-93a1-6c303f7b23b4",
+              "name": "Request parameters are invalid.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "91033987-ec03-4051-bcdd-e269a0134a41",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "61750707-8b10-4431-a38b-8035211c4adf",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2d2d6007-8c93-403c-8bb9-5f0c23077002",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2cd93e69-5236-40ac-b523-cd49a83d0991",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "activity-logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "searchAfter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "next"
+                    },
+                    {
+                      "key": "from",
+                      "value": "2022-12-21T10:15:30Z"
+                    },
+                    {
+                      "key": "until",
+                      "value": "2023-02-25T10:15:30Z"
+                    },
+                    {
+                      "key": "entities",
+                      "value": "device"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "actions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "siteIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "userIds",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "searchQuery",
+                      "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://concord-api.centrastage.net/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2da8e739-d9a5-4e8a-9fe2-581da62a3e91",
+    "name": "Datto RMM /v2/account /v2/account /v2/activity-logs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Datto RMM (Remote Monitoring and Management) REST API",
+      "type": "text/plain"
+    }
+  }
+}

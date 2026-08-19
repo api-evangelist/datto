@@ -1,0 +1,508 @@
+{
+  "item": [
+    {
+      "id": "02f8c782-4fa3-4a88-934c-8a3542bfb308",
+      "name": "/v2/system",
+      "description": {
+        "content": "RMM API System operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bdc01a8e-3303-450d-b72c-0251164e3040",
+          "name": "Fetches the system status (start date, status and version).",
+          "request": {
+            "name": "Fetches the system status (start date, status and version).",
+            "description": {
+              "content": "An API access token is not necessary.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "system",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e11138a5-fccd-435f-a2ef-89067606914b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"version\": \"string\",\n  \"status\": \"string\",\n  \"started\": \"2025-09-24T16:26:46.252Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "343dcf70-c797-4d64-af85-e29d2bbc0507",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e30946c3-b017-4f94-b35a-0f0f9272b565",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eb2126ea-7860-4a06-b9b6-78103ec44770",
+          "name": "Fetches the request rate status for the authenticated user's account.",
+          "request": {
+            "name": "Fetches the request rate status for the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "system",
+                "request_rate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb362114-95de-4854-8bf7-9e42b5ccf8ac",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "request_rate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"slidingTimeWindowSizeSeconds\": 3069,\n  \"accountUid\": \"string\",\n  \"accountCount\": 4650,\n  \"accountRateLimit\": 3282,\n  \"accountCutOffRatio\": 7708.087831450403,\n  \"accountWriteRateLimit\": 8290,\n  \"accountWriteCount\": 6513,\n  \"operationWriteStatus\": {\n    \"key_0\": {\n      \"limit\": 5947,\n      \"count\": 8389\n    },\n    \"key_1\": {\n      \"limit\": 337,\n      \"count\": 7850\n    },\n    \"key_2\": {\n      \"limit\": 2518,\n      \"count\": 7394\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0dd72caa-8666-4088-a9cc-d2acddd4b6c6",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "request_rate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"slidingTimeWindowSizeSeconds\": 3069,\n  \"accountUid\": \"string\",\n  \"accountCount\": 4650,\n  \"accountRateLimit\": 3282,\n  \"accountCutOffRatio\": 7708.087831450403,\n  \"accountWriteRateLimit\": 8290,\n  \"accountWriteCount\": 6513,\n  \"operationWriteStatus\": {\n    \"key_0\": {\n      \"limit\": 5947,\n      \"count\": 8389\n    },\n    \"key_1\": {\n      \"limit\": 337,\n      \"count\": 7850\n    },\n    \"key_2\": {\n      \"limit\": 2518,\n      \"count\": 7394\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "084883c3-6285-44c5-ba8c-22c3290d74db",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "request_rate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d2e1a541-27b9-4b05-930a-d8b37c508bc3",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "request_rate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be77fe06-bb47-4666-bfcf-e574a9faf3a5",
+          "name": "Fetches the pagination configurations.",
+          "request": {
+            "name": "Fetches the pagination configurations.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "system",
+                "pagination"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c313692e-30e9-4cf6-8166-381b37f1b6dd",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "pagination"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"max\": 310\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c271f9b1-51d0-4c8a-ae11-d9c056b89cbd",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "pagination"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"max\": 310\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6ff1226c-6c58-4046-97f1-d257b9fa9501",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "pagination"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7d0bdfd6-706a-46d0-b5ac-60589cc7919e",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "system",
+                    "pagination"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://concord-api.centrastage.net/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0473d979-8aa4-4450-a8a9-ece7584048c6",
+    "name": "Datto RMM /v2/account /v2/account /v2/system API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Datto RMM (Remote Monitoring and Management) REST API",
+      "type": "text/plain"
+    }
+  }
+}

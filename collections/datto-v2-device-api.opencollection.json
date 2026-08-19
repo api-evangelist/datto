@@ -1,0 +1,229 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/device API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/device",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Moves a device from one site to another site.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/site/:siteUid",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path",
+                "description": "The UID of the device to move to a different site"
+              },
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path",
+                "description": "The UID of the target site"
+              }
+            ]
+          },
+          "docs": "Moves a device from one site to another site."
+        },
+        {
+          "info": {
+            "name": "Creates a quick job on the device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/quickjob",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a quick job on the device identified by the given device Uid."
+        },
+        {
+          "info": {
+            "name": "Sets the warranty of a device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/warranty",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "The warrantyDate field should be a ISO 8601 string with this format: yyyy-mm-dd. The warranty date can also be set to null."
+        },
+        {
+          "info": {
+            "name": "Sets the user defined fields of a device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/udf",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Any user defined field supplied with an empty value will be set to null. All user defined fields not supplied will retain their current values."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the device identified by the given device Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the resolved alerts of the device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/alerts/resolved",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        },
+        {
+          "info": {
+            "name": "Fetches the open alerts of the device identified by the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/device/:deviceUid/alerts/open",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the device(s) identified by the given MAC address in format: XXXXXXXXXXXX",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/device/macAddress/:macAddress",
+            "params": [
+              {
+                "name": "macAddress",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the device(s) identified by the given MAC address in format: XXXXXXXXXXXX"
+        },
+        {
+          "info": {
+            "name": "Fetches data of the device identified by the given device Id.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/device/id/:deviceId",
+            "params": [
+              {
+                "name": "deviceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the device identified by the given device Id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

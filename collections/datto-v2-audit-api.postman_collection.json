@@ -1,0 +1,1684 @@
+{
+  "item": [
+    {
+      "id": "7a5d87e3-6f99-451f-95ca-8f44992b4b17",
+      "name": "/v2/audit",
+      "description": {
+        "content": "Operations on audit data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9ba52273-82c6-4474-a6c7-2cb7fc2dc9d0",
+          "name": "Fetches audit data of the printer identified the given device Uid.",
+          "request": {
+            "name": "Fetches audit data of the printer identified the given device Uid.",
+            "description": {
+              "content": "The device class must be of type \"printer\".",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "audit",
+                "printer",
+                ":deviceUid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceUid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b0f5e689-324d-498b-b15b-a9adefa14432",
+              "name": "The device identified by the given device UID is not of class printer.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"printerMarkerSupplies\": [\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    },\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    }\n  ],\n  \"printer\": {\n    \"printedPageCount\": 1175\n  },\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\"\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3275261d-c4ff-4c7e-9699-f8eef6a5cc16",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"printerMarkerSupplies\": [\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    },\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    }\n  ],\n  \"printer\": {\n    \"printedPageCount\": 1175\n  },\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\"\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5f3d3f53-e927-48fe-b223-bbd7c8efa142",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"printerMarkerSupplies\": [\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    },\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    }\n  ],\n  \"printer\": {\n    \"printedPageCount\": 1175\n  },\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\"\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44305983-49ef-4d2e-8b80-e18fe9418f82",
+              "name": "Printer was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"printerMarkerSupplies\": [\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    },\n    {\n      \"description\": \"string\",\n      \"maxCapacity\": \"string\",\n      \"suppliesLevel\": \"string\"\n    }\n  ],\n  \"printer\": {\n    \"printedPageCount\": 1175\n  },\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\"\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8f46ec81-a8e0-428b-a36d-e72929cfa1e1",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "95a6de0a-8234-4202-aa35-827bc1c46851",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "printer",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5bcf81f1-08e0-4f32-83a5-37a0b731d206",
+          "name": "Fetches audit data of the ESXi host identified the given device Uid.",
+          "request": {
+            "name": "Fetches audit data of the ESXi host identified the given device Uid.",
+            "description": {
+              "content": "The device class must be of type \"esxihost\".",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "audit",
+                "esxihost",
+                ":deviceUid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceUid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b49b365b-6da8-4c77-a33c-a7c940d5dc3e",
+              "name": "The device identified by the given device UID is not of class ESXi host.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"name\": \"string\",\n    \"numberOfSnapshots\": 2787,\n    \"serviceTag\": \"string\"\n  },\n  \"guests\": [\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 2874,\n      \"memorySizeTotal\": 5698,\n      \"numberOfSnapshots\": 5091,\n      \"datastores\": \"string\"\n    },\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 9087,\n      \"memorySizeTotal\": 9789,\n      \"numberOfSnapshots\": 7728,\n      \"datastores\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"frequency\": 5754.72952325637,\n      \"name\": \"string\",\n      \"numberOfCores\": 3985\n    },\n    {\n      \"frequency\": 2923.0563829744915,\n      \"name\": \"string\",\n      \"numberOfCores\": 2466\n    }\n  ],\n  \"nics\": [\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 8557,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 7918,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ],\n  \"datastores\": [\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 1127,\n      \"freeSpace\": 2402,\n      \"size\": 5526,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 7383,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 7658,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    },\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 5793,\n      \"freeSpace\": 5793,\n      \"size\": 444,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 5660,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 6441,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "87ac48dc-af46-4a3e-9db2-87dac0472e89",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"name\": \"string\",\n    \"numberOfSnapshots\": 2787,\n    \"serviceTag\": \"string\"\n  },\n  \"guests\": [\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 2874,\n      \"memorySizeTotal\": 5698,\n      \"numberOfSnapshots\": 5091,\n      \"datastores\": \"string\"\n    },\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 9087,\n      \"memorySizeTotal\": 9789,\n      \"numberOfSnapshots\": 7728,\n      \"datastores\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"frequency\": 5754.72952325637,\n      \"name\": \"string\",\n      \"numberOfCores\": 3985\n    },\n    {\n      \"frequency\": 2923.0563829744915,\n      \"name\": \"string\",\n      \"numberOfCores\": 2466\n    }\n  ],\n  \"nics\": [\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 8557,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 7918,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ],\n  \"datastores\": [\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 1127,\n      \"freeSpace\": 2402,\n      \"size\": 5526,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 7383,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 7658,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    },\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 5793,\n      \"freeSpace\": 5793,\n      \"size\": 444,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 5660,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 6441,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "13ad9d6d-d38c-4c9c-a685-0510d37d8426",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"name\": \"string\",\n    \"numberOfSnapshots\": 2787,\n    \"serviceTag\": \"string\"\n  },\n  \"guests\": [\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 2874,\n      \"memorySizeTotal\": 5698,\n      \"numberOfSnapshots\": 5091,\n      \"datastores\": \"string\"\n    },\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 9087,\n      \"memorySizeTotal\": 9789,\n      \"numberOfSnapshots\": 7728,\n      \"datastores\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"frequency\": 5754.72952325637,\n      \"name\": \"string\",\n      \"numberOfCores\": 3985\n    },\n    {\n      \"frequency\": 2923.0563829744915,\n      \"name\": \"string\",\n      \"numberOfCores\": 2466\n    }\n  ],\n  \"nics\": [\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 8557,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 7918,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ],\n  \"datastores\": [\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 1127,\n      \"freeSpace\": 2402,\n      \"size\": 5526,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 7383,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 7658,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    },\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 5793,\n      \"freeSpace\": 5793,\n      \"size\": 444,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 5660,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 6441,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1808eaae-c643-4927-bf39-620b87dcb930",
+              "name": "Device was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"name\": \"string\",\n    \"numberOfSnapshots\": 2787,\n    \"serviceTag\": \"string\"\n  },\n  \"guests\": [\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 2874,\n      \"memorySizeTotal\": 5698,\n      \"numberOfSnapshots\": 5091,\n      \"datastores\": \"string\"\n    },\n    {\n      \"guestName\": \"string\",\n      \"processorSpeedTotal\": 9087,\n      \"memorySizeTotal\": 9789,\n      \"numberOfSnapshots\": 7728,\n      \"datastores\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"frequency\": 5754.72952325637,\n      \"name\": \"string\",\n      \"numberOfCores\": 3985\n    },\n    {\n      \"frequency\": 2923.0563829744915,\n      \"name\": \"string\",\n      \"numberOfCores\": 2466\n    }\n  ],\n  \"nics\": [\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"speed\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 8557,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 7918,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ],\n  \"datastores\": [\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 1127,\n      \"freeSpace\": 2402,\n      \"size\": 5526,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 7383,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 7658,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    },\n    {\n      \"datastoreName\": \"string\",\n      \"subscriptionPercent\": 5793,\n      \"freeSpace\": 5793,\n      \"size\": 444,\n      \"fileSystem\": \"string\",\n      \"status\": \"string\",\n      \"dataExtents\": [\n        {\n          \"name\": \"string\",\n          \"size\": 5660,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        },\n        {\n          \"name\": \"string\",\n          \"size\": 6441,\n          \"mediaType\": \"string\",\n          \"status\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0965037f-0b47-4a22-8cd5-ae7144e591fc",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "de77f6f2-db3d-46df-baf8-f6787db795bc",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "esxihost",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "86a58596-5af8-46cb-88c5-2c865be3e4aa",
+          "name": "Fetches audit data of the generic device identified the given device Uid.",
+          "request": {
+            "name": "Fetches audit data of the generic device identified the given device Uid.",
+            "description": {
+              "content": "The device class must be of type \"device\".",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "audit",
+                "device",
+                ":deviceUid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceUid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f2210159-9b82-461d-a752-98295da2d654",
+              "name": "The device identified by the given device UID is not of class device.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"webRemoteUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"totalPhysicalMemory\": 16,\n    \"username\": \"string\",\n    \"dotNetVersion\": \"string\",\n    \"totalCpuCores\": 5741\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"bios\": {\n    \"instance\": \"string\",\n    \"releaseDate\": \"2022-03-24T00:57:30.708Z\",\n    \"serialNumber\": \"string\",\n    \"smBiosVersion\": \"string\"\n  },\n  \"baseBoard\": {\n    \"manufacturer\": \"string\",\n    \"product\": \"string\"\n  },\n  \"displays\": [\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 6142,\n      \"screenWidth\": 9628\n    },\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 3373,\n      \"screenWidth\": 4411\n    }\n  ],\n  \"logicalDisks\": [\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 158,\n      \"size\": 1141\n    },\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 2762,\n      \"size\": 2967\n    }\n  ],\n  \"mobileInfo\": [\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    },\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"videoBoards\": [\n    {\n      \"displayAdapter\": \"string\"\n    },\n    {\n      \"displayAdapter\": \"string\"\n    }\n  ],\n  \"attachedDevices\": [\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1994-06-05T16:09:19.776Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    },\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1977-07-24T05:04:33.885Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    }\n  ],\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 9862,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 4727,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "70aaf84a-cd04-442a-aeb2-306c54f28c65",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"webRemoteUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"totalPhysicalMemory\": 16,\n    \"username\": \"string\",\n    \"dotNetVersion\": \"string\",\n    \"totalCpuCores\": 5741\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"bios\": {\n    \"instance\": \"string\",\n    \"releaseDate\": \"2022-03-24T00:57:30.708Z\",\n    \"serialNumber\": \"string\",\n    \"smBiosVersion\": \"string\"\n  },\n  \"baseBoard\": {\n    \"manufacturer\": \"string\",\n    \"product\": \"string\"\n  },\n  \"displays\": [\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 6142,\n      \"screenWidth\": 9628\n    },\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 3373,\n      \"screenWidth\": 4411\n    }\n  ],\n  \"logicalDisks\": [\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 158,\n      \"size\": 1141\n    },\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 2762,\n      \"size\": 2967\n    }\n  ],\n  \"mobileInfo\": [\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    },\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"videoBoards\": [\n    {\n      \"displayAdapter\": \"string\"\n    },\n    {\n      \"displayAdapter\": \"string\"\n    }\n  ],\n  \"attachedDevices\": [\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1994-06-05T16:09:19.776Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    },\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1977-07-24T05:04:33.885Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    }\n  ],\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 9862,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 4727,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "434cfbe7-2ddc-4f31-8790-4c372ca23e2a",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"webRemoteUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"totalPhysicalMemory\": 16,\n    \"username\": \"string\",\n    \"dotNetVersion\": \"string\",\n    \"totalCpuCores\": 5741\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"bios\": {\n    \"instance\": \"string\",\n    \"releaseDate\": \"2022-03-24T00:57:30.708Z\",\n    \"serialNumber\": \"string\",\n    \"smBiosVersion\": \"string\"\n  },\n  \"baseBoard\": {\n    \"manufacturer\": \"string\",\n    \"product\": \"string\"\n  },\n  \"displays\": [\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 6142,\n      \"screenWidth\": 9628\n    },\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 3373,\n      \"screenWidth\": 4411\n    }\n  ],\n  \"logicalDisks\": [\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 158,\n      \"size\": 1141\n    },\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 2762,\n      \"size\": 2967\n    }\n  ],\n  \"mobileInfo\": [\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    },\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"videoBoards\": [\n    {\n      \"displayAdapter\": \"string\"\n    },\n    {\n      \"displayAdapter\": \"string\"\n    }\n  ],\n  \"attachedDevices\": [\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1994-06-05T16:09:19.776Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    },\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1977-07-24T05:04:33.885Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    }\n  ],\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 9862,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 4727,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d7dd25d9-cc36-4643-bfc0-c4d3caa3d9d3",
+              "name": "Device was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"portalUrl\": \"string\",\n  \"webRemoteUrl\": \"string\",\n  \"systemInfo\": {\n    \"manufacturer\": \"string\",\n    \"model\": \"string\",\n    \"totalPhysicalMemory\": 16,\n    \"username\": \"string\",\n    \"dotNetVersion\": \"string\",\n    \"totalCpuCores\": 5741\n  },\n  \"nics\": [\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"instance\": \"string\",\n      \"ipv4\": \"string\",\n      \"ipv6\": \"string\",\n      \"macAddress\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"bios\": {\n    \"instance\": \"string\",\n    \"releaseDate\": \"2022-03-24T00:57:30.708Z\",\n    \"serialNumber\": \"string\",\n    \"smBiosVersion\": \"string\"\n  },\n  \"baseBoard\": {\n    \"manufacturer\": \"string\",\n    \"product\": \"string\"\n  },\n  \"displays\": [\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 6142,\n      \"screenWidth\": 9628\n    },\n    {\n      \"instance\": \"string\",\n      \"screenHeight\": 3373,\n      \"screenWidth\": 4411\n    }\n  ],\n  \"logicalDisks\": [\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 158,\n      \"size\": 1141\n    },\n    {\n      \"description\": \"string\",\n      \"diskIdentifier\": \"string\",\n      \"freespace\": 2762,\n      \"size\": 2967\n    }\n  ],\n  \"mobileInfo\": [\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    },\n    {\n      \"iccid\": \"string\",\n      \"imei\": \"string\",\n      \"number\": \"string\",\n      \"operator\": \"string\"\n    }\n  ],\n  \"processors\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"videoBoards\": [\n    {\n      \"displayAdapter\": \"string\"\n    },\n    {\n      \"displayAdapter\": \"string\"\n    }\n  ],\n  \"attachedDevices\": [\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1994-06-05T16:09:19.776Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    },\n    {\n      \"deviceName\": \"string\",\n      \"deviceType\": \"string\",\n      \"driverFile\": \"string\",\n      \"driverFileLastModified\": \"1977-07-24T05:04:33.885Z\",\n      \"driverManufacturer\": \"string\",\n      \"driverName\": \"string\",\n      \"driverVersion\": \"string\",\n      \"portName\": \"string\"\n    }\n  ],\n  \"snmpInfo\": {\n    \"snmpName\": \"string\",\n    \"snmpContact\": \"string\",\n    \"snmpDescription\": \"string\",\n    \"snmpLocation\": \"string\",\n    \"snmpUptime\": \"string\",\n    \"nicManufacturer\": \"string\",\n    \"objectId\": \"string\",\n    \"snmpSerial\": \"string\"\n  },\n  \"physicalMemory\": [\n    {\n      \"module\": \"string\",\n      \"size\": 9862,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    },\n    {\n      \"module\": \"string\",\n      \"size\": 4727,\n      \"type\": \"string\",\n      \"speed\": \"string\",\n      \"serialNumber\": \"string\",\n      \"partNumber\": \"string\",\n      \"bank\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "888de9e5-004f-4c90-89ce-0121dc098581",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6ba03a50-ba0c-4dbd-adc7-96bb93d375f8",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cad92ed-8794-4024-8cbc-a485ace78e0d",
+          "name": "Fetches audited software of the generic device identified the given device Uid.",
+          "request": {
+            "name": "Fetches audited software of the generic device identified the given device Uid.",
+            "description": {
+              "content": "The device class must be of type \"device\".",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "audit",
+                "device",
+                ":deviceUid",
+                "software"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceUid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "954e0c7f-b8bd-455d-8c7e-b8ba69218571",
+              "name": "The device identified by the given device UID is not of class device.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8186,\n    \"totalCount\": 5758,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"software\": [\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "271df2ba-a96b-46c1-9799-622e6466191b",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8186,\n    \"totalCount\": 5758,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"software\": [\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "25275a0c-90c2-4abb-aa4f-f8ae978e2b32",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8186,\n    \"totalCount\": 5758,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"software\": [\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "605be3d4-6a2b-4c54-8a62-01e0d755de99",
+              "name": "Device was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8186,\n    \"totalCount\": 5758,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"software\": [\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"version\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6b85acf6-9bb7-48f3-b769-920c3ca372d0",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "21110504-9867-4237-aa96-aa84dddb4bc5",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    ":deviceUid",
+                    "software"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceUid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30ab66ee-394e-4181-9718-8b94e4655d9a",
+          "name": "Fetches audit data of the generic device(s) identified the given MAC address in format: XXXXXXXXXXXX",
+          "request": {
+            "name": "Fetches audit data of the generic device(s) identified the given MAC address in format: XXXXXXXXXXXX",
+            "description": {
+              "content": "The device class must be of type \"device\".",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "audit",
+                "device",
+                "macAddress",
+                ":macAddress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "macAddress",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "788505dc-07f2-423d-9cc2-29ee45c0709f",
+              "name": "Audit data was found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"portalUrl\": \"string\",\n    \"webRemoteUrl\": \"string\",\n    \"systemInfo\": {\n      \"manufacturer\": \"string\",\n      \"model\": \"string\",\n      \"totalPhysicalMemory\": 586,\n      \"username\": \"string\",\n      \"dotNetVersion\": \"string\",\n      \"totalCpuCores\": 9740\n    },\n    \"nics\": [\n      {\n        \"instance\": \"string\",\n        \"ipv4\": \"string\",\n        \"ipv6\": \"string\",\n        \"macAddress\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"instance\": \"string\",\n        \"ipv4\": \"string\",\n        \"ipv6\": \"string\",\n        \"macAddress\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"bios\": {\n      \"instance\": \"string\",\n      \"releaseDate\": \"1946-11-24T15:29:24.579Z\",\n      \"serialNumber\": \"string\",\n      \"smBiosVersion\": \"string\"\n    },\n    \"baseBoard\": {\n      \"manufacturer\": \"string\",\n      \"product\": \"string\"\n    },\n    \"displays\": [\n      {\n        \"instance\": \"string\",\n        \"screenHeight\": 5726,\n        \"screenWidth\": 5298\n      },\n      {\n        \"instance\": \"string\",\n        \"screenHeight\": 4717,\n        \"screenWidth\": 2119\n      }\n    ],\n    \"logicalDisks\": [\n      {\n        \"description\": \"string\",\n        \"diskIdentifier\": \"string\",\n        \"freespace\": 2783,\n        \"size\": 6818\n      },\n      {\n        \"description\": \"string\",\n        \"diskIdentifier\": \"string\",\n        \"freespace\": 7520,\n        \"size\": 9861\n      }\n    ],\n    \"mobileInfo\": [\n      {\n        \"iccid\": \"string\",\n        \"imei\": \"string\",\n        \"number\": \"string\",\n        \"operator\": \"string\"\n      },\n      {\n        \"iccid\": \"string\",\n        \"imei\": \"string\",\n        \"number\": \"string\",\n        \"operator\": \"string\"\n      }\n    ],\n    \"processors\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"videoBoards\": [\n      {\n        \"displayAdapter\": \"string\"\n      },\n      {\n        \"displayAdapter\": \"string\"\n      }\n    ],\n    \"attachedDevices\": [\n      {\n        \"deviceName\": \"string\",\n        \"deviceType\": \"string\",\n        \"driverFile\": \"string\",\n        \"driverFileLastModified\": \"1955-03-13T00:04:32.164Z\",\n        \"driverManufacturer\": \"string\",\n        \"driverName\": \"string\",\n        \"driverVersion\": \"string\",\n        \"portName\": \"string\"\n      },\n      {\n        \"deviceName\": \"string\",\n        \"deviceType\": \"string\",\n        \"driverFile\": \"string\",\n        \"driverFileLastModified\": \"1966-02-23T06:54:47.327Z\",\n        \"driverManufacturer\": \"string\",\n        \"driverName\": \"string\",\n        \"driverVersion\": \"string\",\n        \"portName\": \"string\"\n      }\n    ],\n    \"snmpInfo\": {\n      \"snmpName\": \"string\",\n      \"snmpContact\": \"string\",\n      \"snmpDescription\": \"string\",\n      \"snmpLocation\": \"string\",\n      \"snmpUptime\": \"string\",\n      \"nicManufacturer\": \"string\",\n      \"objectId\": \"string\",\n      \"snmpSerial\": \"string\"\n    },\n    \"physicalMemory\": [\n      {\n        \"module\": \"string\",\n        \"size\": 9024,\n        \"type\": \"string\",\n        \"speed\": \"string\",\n        \"serialNumber\": \"string\",\n        \"partNumber\": \"string\",\n        \"bank\": \"string\"\n      },\n      {\n        \"module\": \"string\",\n        \"size\": 4436,\n        \"type\": \"string\",\n        \"speed\": \"string\",\n        \"serialNumber\": \"string\",\n        \"partNumber\": \"string\",\n        \"bank\": \"string\"\n      }\n    ]\n  },\n  {\n    \"portalUrl\": \"string\",\n    \"webRemoteUrl\": \"string\",\n    \"systemInfo\": {\n      \"manufacturer\": \"string\",\n      \"model\": \"string\",\n      \"totalPhysicalMemory\": 3038,\n      \"username\": \"string\",\n      \"dotNetVersion\": \"string\",\n      \"totalCpuCores\": 679\n    },\n    \"nics\": [\n      {\n        \"instance\": \"string\",\n        \"ipv4\": \"string\",\n        \"ipv6\": \"string\",\n        \"macAddress\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"instance\": \"string\",\n        \"ipv4\": \"string\",\n        \"ipv6\": \"string\",\n        \"macAddress\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"bios\": {\n      \"instance\": \"string\",\n      \"releaseDate\": \"1978-10-06T00:00:29.840Z\",\n      \"serialNumber\": \"string\",\n      \"smBiosVersion\": \"string\"\n    },\n    \"baseBoard\": {\n      \"manufacturer\": \"string\",\n      \"product\": \"string\"\n    },\n    \"displays\": [\n      {\n        \"instance\": \"string\",\n        \"screenHeight\": 2223,\n        \"screenWidth\": 7479\n      },\n      {\n        \"instance\": \"string\",\n        \"screenHeight\": 7932,\n        \"screenWidth\": 3297\n      }\n    ],\n    \"logicalDisks\": [\n      {\n        \"description\": \"string\",\n        \"diskIdentifier\": \"string\",\n        \"freespace\": 4010,\n        \"size\": 3182\n      },\n      {\n        \"description\": \"string\",\n        \"diskIdentifier\": \"string\",\n        \"freespace\": 9903,\n        \"size\": 4020\n      }\n    ],\n    \"mobileInfo\": [\n      {\n        \"iccid\": \"string\",\n        \"imei\": \"string\",\n        \"number\": \"string\",\n        \"operator\": \"string\"\n      },\n      {\n        \"iccid\": \"string\",\n        \"imei\": \"string\",\n        \"number\": \"string\",\n        \"operator\": \"string\"\n      }\n    ],\n    \"processors\": [\n      {\n        \"name\": \"string\"\n      },\n      {\n        \"name\": \"string\"\n      }\n    ],\n    \"videoBoards\": [\n      {\n        \"displayAdapter\": \"string\"\n      },\n      {\n        \"displayAdapter\": \"string\"\n      }\n    ],\n    \"attachedDevices\": [\n      {\n        \"deviceName\": \"string\",\n        \"deviceType\": \"string\",\n        \"driverFile\": \"string\",\n        \"driverFileLastModified\": \"2003-06-08T19:34:13.288Z\",\n        \"driverManufacturer\": \"string\",\n        \"driverName\": \"string\",\n        \"driverVersion\": \"string\",\n        \"portName\": \"string\"\n      },\n      {\n        \"deviceName\": \"string\",\n        \"deviceType\": \"string\",\n        \"driverFile\": \"string\",\n        \"driverFileLastModified\": \"1951-05-28T02:16:52.710Z\",\n        \"driverManufacturer\": \"string\",\n        \"driverName\": \"string\",\n        \"driverVersion\": \"string\",\n        \"portName\": \"string\"\n      }\n    ],\n    \"snmpInfo\": {\n      \"snmpName\": \"string\",\n      \"snmpContact\": \"string\",\n      \"snmpDescription\": \"string\",\n      \"snmpLocation\": \"string\",\n      \"snmpUptime\": \"string\",\n      \"nicManufacturer\": \"string\",\n      \"objectId\": \"string\",\n      \"snmpSerial\": \"string\"\n    },\n    \"physicalMemory\": [\n      {\n        \"module\": \"string\",\n        \"size\": 6769,\n        \"type\": \"string\",\n        \"speed\": \"string\",\n        \"serialNumber\": \"string\",\n        \"partNumber\": \"string\",\n        \"bank\": \"string\"\n      },\n      {\n        \"module\": \"string\",\n        \"size\": 6167,\n        \"type\": \"string\",\n        \"speed\": \"string\",\n        \"serialNumber\": \"string\",\n        \"partNumber\": \"string\",\n        \"bank\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93910e90-b495-456a-988b-07200ac4f203",
+              "name": "The device identified by the given device MAC address is not of class device.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "132d0a0c-d83c-43aa-848c-e35266f672f7",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bcaa7878-adc0-499a-8ab7-527073086a2a",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2d3beb8d-ae31-471b-bbc1-9c9503fbc6bb",
+              "name": "Device was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8297ef91-8420-4a3e-8d18-137dc8a48b04",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b9c15fdf-e4d9-4bd2-b72b-d22b5ace02b1",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "audit",
+                    "device",
+                    "macAddress",
+                    ":macAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "macAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://concord-api.centrastage.net/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f7e82a4c-705c-452b-bbba-6d084bed9a97",
+    "name": "Datto RMM /v2/account /v2/account /v2/audit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Datto RMM (Remote Monitoring and Management) REST API",
+      "type": "text/plain"
+    }
+  }
+}

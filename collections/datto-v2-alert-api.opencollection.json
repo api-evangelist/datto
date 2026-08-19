@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/alert API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/alert",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Alerts can no longer be un-muted, as of the 8.9.0 release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/alert/:alertUid/unmute",
+            "params": [
+              {
+                "name": "alertUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Alerts can no longer be un-muted, as of the 8.9.0 release."
+        },
+        {
+          "info": {
+            "name": "Resolves the alert identified by the given alert Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/alert/:alertUid/resolve",
+            "params": [
+              {
+                "name": "alertUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Resolves the alert identified by the given alert Uid."
+        },
+        {
+          "info": {
+            "name": "Alerts can no longer be muted, as of the 8.9.0 release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/alert/:alertUid/mute",
+            "params": [
+              {
+                "name": "alertUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Alerts can no longer be muted, as of the 8.9.0 release."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the alert identified by the given alert Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/alert/:alertUid",
+            "params": [
+              {
+                "name": "alertUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the alert identified by the given alert Uid."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

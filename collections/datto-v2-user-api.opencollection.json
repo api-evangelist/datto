@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/user API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/user",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Resets the authenticated user's API access and secret keys.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/user/resetApiKeys"
+          },
+          "docs": "Resets the authenticated user's API access and secret keys."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

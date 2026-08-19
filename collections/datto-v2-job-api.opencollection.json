@@ -1,0 +1,133 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/job API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/job",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches data of the job identified by the given job Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/job/:jobUid",
+            "params": [
+              {
+                "name": "jobUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the job identified by the given job Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches job results of the job identified by the job Uid for device identified by the device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/job/:jobUid/results/:deviceUid",
+            "params": [
+              {
+                "name": "jobUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches job results of the job identified by the job Uid for device identified by the device Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the job's StdOut identified by the given job Uid and device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/job/:jobUid/results/:deviceUid/stdout",
+            "params": [
+              {
+                "name": "jobUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the job's StdOut identified by the given job Uid and device Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the job's StdErr identified by the given job Uid and device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/job/:jobUid/results/:deviceUid/stderr",
+            "params": [
+              {
+                "name": "jobUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the job's StdErr identified by the given job Uid and device Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches components of the job identified by the given job Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/job/:jobUid/components",
+            "params": [
+              {
+                "name": "jobUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches components of the job identified by the given job Uid."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

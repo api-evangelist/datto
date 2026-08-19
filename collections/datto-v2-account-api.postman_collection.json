@@ -1,0 +1,3083 @@
+{
+  "item": [
+    {
+      "id": "72c5aba3-7eb0-4c32-93d5-21d2bb794b69",
+      "name": "/v2/account",
+      "description": {
+        "content": "Operations on accounts",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f8d956c0-52fe-4388-bc12-9e524a4be540",
+          "name": "Creates an account variable",
+          "request": {
+            "name": "Creates an account variable",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "variable"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a6fd6dee-aa98-43dd-9dbe-c58f62dbc86e",
+              "name": "Request parameters are invalid.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f6b4c354-9efd-4276-98d7-1ad2b3225c59",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a143e2ed-c264-4a4b-b39e-d276a3a6a27e",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4da8c455-9aee-4d11-a3cd-5cd09ff6bce5",
+              "name": "Variable was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9a481d88-83ce-471a-ac0f-feb7f4aedad1",
+              "name": "Request aborted due to concurrent write access to this record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b4cf1b9f-3755-4509-98aa-1139f92b2343",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\",\n  \"masked\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ce763d11-68db-4466-ac0b-a64fc0787c12",
+          "name": "Updates the account variable identified by the given variable Id.",
+          "request": {
+            "name": "Updates the account variable identified by the given variable Id.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "variable",
+                ":variableId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "variableId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a32f708c-889f-4476-9d3d-8884353b519b",
+              "name": "Request parameters are invalid.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2c090882-3682-42cd-9be1-4f30f956a78a",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3bb77c5e-fcda-4cbd-86ac-755d853d4f58",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a8efcc54-dcb0-4579-840a-6262f9d68303",
+              "name": "Variable was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "02a7938d-46d4-4224-8a67-eba9b5a64647",
+              "name": "Request aborted due to concurrent write access to this record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f81d967e-c2e5-4be0-8460-5dfa354b5dfb",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9ae87ad-56c2-4678-be1a-fe80fa0e753e",
+          "name": "Deletes the account variable identified by the given variable Id.",
+          "request": {
+            "name": "Deletes the account variable identified by the given variable Id.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "variable",
+                ":variableId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "variableId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f9e18da8-3d90-4b6b-870e-951041d7e0ba",
+              "name": "Request parameters are invalid.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cf1aa9f0-f113-4e31-850c-ff4578be60b3",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f5ca7de8-3954-49b5-b169-4a5557dfc478",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a370d89e-a304-465a-b8f5-99f279afff21",
+              "name": "Variable was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6371c26a-c4c7-487a-bd82-2c464bb6b3ae",
+              "name": "Request aborted due to concurrent write access to this record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5fb669bd-07d1-4f8c-9bad-6568d899b27d",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variable",
+                    ":variableId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "variableId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "024ba7d0-c49d-44c3-ae30-c551159a68d2",
+          "name": "Fetches the authenticated user's account data.",
+          "request": {
+            "name": "Fetches the authenticated user's account data.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ff09f73f-f33f-4aa9-b2ed-2e69655cdfd9",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2710,\n  \"name\": \"string\",\n  \"descriptor\": {\n    \"bilingEmail\": \"string\",\n    \"deviceLimit\": 8200,\n    \"timeZone\": \"string\"\n  },\n  \"uid\": \"string\",\n  \"currency\": \"string\",\n  \"devicesStatus\": {\n    \"numberOfDevices\": 3717,\n    \"numberOfOnlineDevices\": 8462,\n    \"numberOfOfflineDevices\": 7840,\n    \"numberOfOnDemandDevices\": 5983,\n    \"numberOfManagedDevices\": 6542\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a180e121-439b-4d3a-a773-1ed077cd4299",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2710,\n  \"name\": \"string\",\n  \"descriptor\": {\n    \"bilingEmail\": \"string\",\n    \"deviceLimit\": 8200,\n    \"timeZone\": \"string\"\n  },\n  \"uid\": \"string\",\n  \"currency\": \"string\",\n  \"devicesStatus\": {\n    \"numberOfDevices\": 3717,\n    \"numberOfOnlineDevices\": 8462,\n    \"numberOfOfflineDevices\": 7840,\n    \"numberOfOnDemandDevices\": 5983,\n    \"numberOfManagedDevices\": 6542\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "95ddfe3c-e314-449e-9858-4d0f968b99b1",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "af690e42-7d05-4291-9be1-fb8dc21abe59",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f09acdd8-a1ef-4f09-9cbd-142de0acf2e1",
+          "name": "Fetches the account variables.",
+          "request": {
+            "name": "Fetches the account variables.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "variables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bcec9f2f-ba7c-4fb2-99fe-1dfa63544bf0",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 6644,\n    \"totalCount\": 9724,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"variables\": [\n    {\n      \"id\": 441,\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"masked\": false\n    },\n    {\n      \"id\": 7731,\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"masked\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ab90e8da-2980-4e4e-925f-72722b057fef",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 6644,\n    \"totalCount\": 9724,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"variables\": [\n    {\n      \"id\": 441,\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"masked\": false\n    },\n    {\n      \"id\": 7731,\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"masked\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d8a65d4d-43dc-4f9e-9ef7-6dfc1a77a812",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1ccf3ed3-3a3b-42d5-bbf5-4682728453ac",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ea1a954-4ec3-452c-84dc-76310dff704e",
+          "name": "Fetches the authentication users records of the authenticated user's account.",
+          "request": {
+            "name": "Fetches the authentication users records of the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed011fdb-bd6d-4cdd-a856-b7fa129976bd",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2877,\n    \"totalCount\": 3150,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"users\": [\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\",\n      \"telephone\": \"string\",\n      \"status\": \"string\",\n      \"created\": \"2022-07-07T09:27:37.676Z\",\n      \"lastAccess\": \"2005-03-19T05:44:31.976Z\",\n      \"disabled\": false\n    },\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\",\n      \"telephone\": \"string\",\n      \"status\": \"string\",\n      \"created\": \"2002-06-03T17:40:34.416Z\",\n      \"lastAccess\": \"1966-11-11T17:46:13.591Z\",\n      \"disabled\": true\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2a79a8e9-d375-4bd2-99df-0543b8c7e95c",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2877,\n    \"totalCount\": 3150,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"users\": [\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\",\n      \"telephone\": \"string\",\n      \"status\": \"string\",\n      \"created\": \"2022-07-07T09:27:37.676Z\",\n      \"lastAccess\": \"2005-03-19T05:44:31.976Z\",\n      \"disabled\": false\n    },\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\",\n      \"telephone\": \"string\",\n      \"status\": \"string\",\n      \"created\": \"2002-06-03T17:40:34.416Z\",\n      \"lastAccess\": \"1966-11-11T17:46:13.591Z\",\n      \"disabled\": true\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f5ac32ed-89be-44b3-ad99-eb770b58bc96",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "af6f16d5-e1f4-4f59-b82f-c809ce8cc577",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45ad417d-8d1e-4393-8b16-f495e5486efb",
+          "name": "Fetches the site records of the authenticated user's account.",
+          "request": {
+            "name": "Fetches the site records of the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "sites"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "siteName",
+                  "value": "<string>",
+                  "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a507d4dd-4768-45c3-9ecc-c1e3fa4a88c7",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "sites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7092,\n    \"totalCount\": 9987,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"sites\": [\n    {\n      \"id\": 4854,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"notes\": \"string\",\n      \"onDemand\": true,\n      \"splashtopAutoInstall\": true,\n      \"proxySettings\": {\n        \"host\": \"string\",\n        \"password\": \"string\",\n        \"port\": 2305,\n        \"type\": \"http\",\n        \"username\": \"string\"\n      },\n      \"devicesStatus\": {\n        \"numberOfDevices\": 7309,\n        \"numberOfOnlineDevices\": 2401,\n        \"numberOfOfflineDevices\": 2837\n      },\n      \"autotaskCompanyName\": \"string\",\n      \"autotaskCompanyId\": \"string\",\n      \"portalUrl\": \"string\"\n    },\n    {\n      \"id\": 9385,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"notes\": \"string\",\n      \"onDemand\": true,\n      \"splashtopAutoInstall\": false,\n      \"proxySettings\": {\n        \"host\": \"string\",\n        \"password\": \"string\",\n        \"port\": 9920,\n        \"type\": \"socks5\",\n        \"username\": \"string\"\n      },\n      \"devicesStatus\": {\n        \"numberOfDevices\": 6704,\n        \"numberOfOnlineDevices\": 4836,\n        \"numberOfOfflineDevices\": 8718\n      },\n      \"autotaskCompanyName\": \"string\",\n      \"autotaskCompanyId\": \"string\",\n      \"portalUrl\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6227a064-278d-4410-bbed-2130949e058a",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "sites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7092,\n    \"totalCount\": 9987,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"sites\": [\n    {\n      \"id\": 4854,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"notes\": \"string\",\n      \"onDemand\": true,\n      \"splashtopAutoInstall\": true,\n      \"proxySettings\": {\n        \"host\": \"string\",\n        \"password\": \"string\",\n        \"port\": 2305,\n        \"type\": \"http\",\n        \"username\": \"string\"\n      },\n      \"devicesStatus\": {\n        \"numberOfDevices\": 7309,\n        \"numberOfOnlineDevices\": 2401,\n        \"numberOfOfflineDevices\": 2837\n      },\n      \"autotaskCompanyName\": \"string\",\n      \"autotaskCompanyId\": \"string\",\n      \"portalUrl\": \"string\"\n    },\n    {\n      \"id\": 9385,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"notes\": \"string\",\n      \"onDemand\": true,\n      \"splashtopAutoInstall\": false,\n      \"proxySettings\": {\n        \"host\": \"string\",\n        \"password\": \"string\",\n        \"port\": 9920,\n        \"type\": \"socks5\",\n        \"username\": \"string\"\n      },\n      \"devicesStatus\": {\n        \"numberOfDevices\": 6704,\n        \"numberOfOnlineDevices\": 4836,\n        \"numberOfOfflineDevices\": 8718\n      },\n      \"autotaskCompanyName\": \"string\",\n      \"autotaskCompanyId\": \"string\",\n      \"portalUrl\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1fb255c2-ae86-410f-9f75-1e57448629de",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "sites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0cf1ce03-9196-4bb5-94d8-84b00610f2d2",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "sites"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ed9c2f34-ea15-4159-9ed3-dea62eea7213",
+          "name": "Fetches the sites records with its mapped dnet network id for the authenticated user's account.",
+          "request": {
+            "name": "Fetches the sites records with its mapped dnet network id for the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "dnet-site-mappings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "28eadcec-7fe6-45d1-b827-af82a8497e7a",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "dnet-site-mappings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8812,\n    \"totalCount\": 7358,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"dnetSiteMappings\": [\n    {\n      \"id\": 227,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"dattoNetworkingNetworkIds\": [\n        2874,\n        1844\n      ],\n      \"portalUrl\": \"string\"\n    },\n    {\n      \"id\": 9976,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"dattoNetworkingNetworkIds\": [\n        3492,\n        3642\n      ],\n      \"portalUrl\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ad43a003-6516-4304-8e9d-830a953e2e21",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "dnet-site-mappings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 8812,\n    \"totalCount\": 7358,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"dnetSiteMappings\": [\n    {\n      \"id\": 227,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"dattoNetworkingNetworkIds\": [\n        2874,\n        1844\n      ],\n      \"portalUrl\": \"string\"\n    },\n    {\n      \"id\": 9976,\n      \"uid\": \"string\",\n      \"accountUid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"dattoNetworkingNetworkIds\": [\n        3492,\n        3642\n      ],\n      \"portalUrl\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6a48cfb-c271-4840-8f15-4446d99da041",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "dnet-site-mappings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ee11d6b-d73f-4409-b476-4990c7366b87",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "dnet-site-mappings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d8b1441-bc0c-4b7e-b7fe-9d2583e124a0",
+          "name": "Fetches the devices of the authenticated user's account.",
+          "request": {
+            "name": "Fetches the devices of the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filterId",
+                  "value": "<long>",
+                  "description": "Optional. If applied, this filter exclusively determines the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "hostname",
+                  "value": "<string>",
+                  "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+                },
+                {
+                  "disabled": false,
+                  "key": "deviceType",
+                  "value": "<string>",
+                  "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+                },
+                {
+                  "disabled": false,
+                  "key": "operatingSystem",
+                  "value": "<string>",
+                  "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+                },
+                {
+                  "disabled": false,
+                  "key": "siteName",
+                  "value": "<string>",
+                  "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9dded954-5d41-4d4c-97d9-f4d557024c7a",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "filterId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hostname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operatingSystem",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2107,\n    \"totalCount\": 2122,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"devices\": [\n    {\n      \"id\": 8555,\n      \"uid\": \"string\",\n      \"siteId\": 3974,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": false,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1955-06-11T21:46:42.286Z\",\n      \"lastReboot\": \"1977-08-08T19:25:10.434Z\",\n      \"lastAuditDate\": \"1960-06-19T07:22:20.397Z\",\n      \"creationDate\": \"1972-01-26T07:09:02.655Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"unknown\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotDetected\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"NoData\",\n        \"patchesApprovedPending\": 7436,\n        \"patchesNotApproved\": 3667,\n        \"patchesInstalled\": 8064\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": true,\n      \"onboardedViaNetworkMonitor\": true\n    },\n    {\n      \"id\": 4299,\n      \"uid\": \"string\",\n      \"siteId\": 184,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": true,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1984-12-01T18:21:32.305Z\",\n      \"lastReboot\": \"2002-05-31T01:40:11.450Z\",\n      \"lastAuditDate\": \"1960-12-30T07:11:21.546Z\",\n      \"creationDate\": \"1957-03-14T12:21:32.601Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"rmmnetworkdevice\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotRunning\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"RebootRequired\",\n        \"patchesApprovedPending\": 5064,\n        \"patchesNotApproved\": 2582,\n        \"patchesInstalled\": 8592\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": false,\n      \"onboardedViaNetworkMonitor\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "94a80375-412a-418b-895f-9f82707d5d16",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "filterId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hostname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operatingSystem",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2107,\n    \"totalCount\": 2122,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"devices\": [\n    {\n      \"id\": 8555,\n      \"uid\": \"string\",\n      \"siteId\": 3974,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": false,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1955-06-11T21:46:42.286Z\",\n      \"lastReboot\": \"1977-08-08T19:25:10.434Z\",\n      \"lastAuditDate\": \"1960-06-19T07:22:20.397Z\",\n      \"creationDate\": \"1972-01-26T07:09:02.655Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"unknown\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotDetected\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"NoData\",\n        \"patchesApprovedPending\": 7436,\n        \"patchesNotApproved\": 3667,\n        \"patchesInstalled\": 8064\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": true,\n      \"onboardedViaNetworkMonitor\": true\n    },\n    {\n      \"id\": 4299,\n      \"uid\": \"string\",\n      \"siteId\": 184,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": true,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1984-12-01T18:21:32.305Z\",\n      \"lastReboot\": \"2002-05-31T01:40:11.450Z\",\n      \"lastAuditDate\": \"1960-12-30T07:11:21.546Z\",\n      \"creationDate\": \"1957-03-14T12:21:32.601Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"rmmnetworkdevice\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotRunning\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"RebootRequired\",\n        \"patchesApprovedPending\": 5064,\n        \"patchesNotApproved\": 2582,\n        \"patchesInstalled\": 8592\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": false,\n      \"onboardedViaNetworkMonitor\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f469c347-7ced-4cba-9203-59985f2a0e67",
+              "name": "Filter was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "filterId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hostname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operatingSystem",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 2107,\n    \"totalCount\": 2122,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"devices\": [\n    {\n      \"id\": 8555,\n      \"uid\": \"string\",\n      \"siteId\": 3974,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": false,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1955-06-11T21:46:42.286Z\",\n      \"lastReboot\": \"1977-08-08T19:25:10.434Z\",\n      \"lastAuditDate\": \"1960-06-19T07:22:20.397Z\",\n      \"creationDate\": \"1972-01-26T07:09:02.655Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"unknown\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotDetected\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"NoData\",\n        \"patchesApprovedPending\": 7436,\n        \"patchesNotApproved\": 3667,\n        \"patchesInstalled\": 8064\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": true,\n      \"onboardedViaNetworkMonitor\": true\n    },\n    {\n      \"id\": 4299,\n      \"uid\": \"string\",\n      \"siteId\": 184,\n      \"siteUid\": \"string\",\n      \"siteName\": \"string\",\n      \"deviceType\": {\n        \"category\": \"string\",\n        \"type\": \"string\"\n      },\n      \"hostname\": \"string\",\n      \"intIpAddress\": \"string\",\n      \"operatingSystem\": \"string\",\n      \"lastLoggedInUser\": \"string\",\n      \"domain\": \"string\",\n      \"cagVersion\": \"string\",\n      \"displayVersion\": \"string\",\n      \"extIpAddress\": \"string\",\n      \"description\": \"string\",\n      \"a64Bit\": true,\n      \"rebootRequired\": false,\n      \"online\": false,\n      \"suspended\": false,\n      \"deleted\": true,\n      \"lastSeen\": \"1984-12-01T18:21:32.305Z\",\n      \"lastReboot\": \"2002-05-31T01:40:11.450Z\",\n      \"lastAuditDate\": \"1960-12-30T07:11:21.546Z\",\n      \"creationDate\": \"1957-03-14T12:21:32.601Z\",\n      \"udf\": {\n        \"udf1\": \"string\",\n        \"udf2\": \"string\",\n        \"udf3\": \"string\",\n        \"udf4\": \"string\",\n        \"udf5\": \"string\",\n        \"udf6\": \"string\",\n        \"udf7\": \"string\",\n        \"udf8\": \"string\",\n        \"udf9\": \"string\",\n        \"udf10\": \"string\",\n        \"udf11\": \"string\",\n        \"udf12\": \"string\",\n        \"udf13\": \"string\",\n        \"udf14\": \"string\",\n        \"udf15\": \"string\",\n        \"udf16\": \"string\",\n        \"udf17\": \"string\",\n        \"udf18\": \"string\",\n        \"udf19\": \"string\",\n        \"udf20\": \"string\",\n        \"udf21\": \"string\",\n        \"udf22\": \"string\",\n        \"udf23\": \"string\",\n        \"udf24\": \"string\",\n        \"udf25\": \"string\",\n        \"udf26\": \"string\",\n        \"udf27\": \"string\",\n        \"udf28\": \"string\",\n        \"udf29\": \"string\",\n        \"udf30\": \"string\",\n        \"udf31\": \"string\",\n        \"udf32\": \"string\",\n        \"udf33\": \"string\",\n        \"udf34\": \"string\",\n        \"udf35\": \"string\",\n        \"udf36\": \"string\",\n        \"udf37\": \"string\",\n        \"udf38\": \"string\",\n        \"udf39\": \"string\",\n        \"udf40\": \"string\",\n        \"udf41\": \"string\",\n        \"udf42\": \"string\",\n        \"udf43\": \"string\",\n        \"udf44\": \"string\",\n        \"udf45\": \"string\",\n        \"udf46\": \"string\",\n        \"udf47\": \"string\",\n        \"udf48\": \"string\",\n        \"udf49\": \"string\",\n        \"udf50\": \"string\",\n        \"udf51\": \"string\",\n        \"udf52\": \"string\",\n        \"udf53\": \"string\",\n        \"udf54\": \"string\",\n        \"udf55\": \"string\",\n        \"udf56\": \"string\",\n        \"udf57\": \"string\",\n        \"udf58\": \"string\",\n        \"udf59\": \"string\",\n        \"udf60\": \"string\",\n        \"udf61\": \"string\",\n        \"udf62\": \"string\",\n        \"udf63\": \"string\",\n        \"udf64\": \"string\",\n        \"udf65\": \"string\",\n        \"udf66\": \"string\",\n        \"udf67\": \"string\",\n        \"udf68\": \"string\",\n        \"udf69\": \"string\",\n        \"udf70\": \"string\",\n        \"udf71\": \"string\",\n        \"udf72\": \"string\",\n        \"udf73\": \"string\",\n        \"udf74\": \"string\",\n        \"udf75\": \"string\",\n        \"udf76\": \"string\",\n        \"udf77\": \"string\",\n        \"udf78\": \"string\",\n        \"udf79\": \"string\",\n        \"udf80\": \"string\",\n        \"udf81\": \"string\",\n        \"udf82\": \"string\",\n        \"udf83\": \"string\",\n        \"udf84\": \"string\",\n        \"udf85\": \"string\",\n        \"udf86\": \"string\",\n        \"udf87\": \"string\",\n        \"udf88\": \"string\",\n        \"udf89\": \"string\",\n        \"udf90\": \"string\",\n        \"udf91\": \"string\",\n        \"udf92\": \"string\",\n        \"udf93\": \"string\",\n        \"udf94\": \"string\",\n        \"udf95\": \"string\",\n        \"udf96\": \"string\",\n        \"udf97\": \"string\",\n        \"udf98\": \"string\",\n        \"udf99\": \"string\",\n        \"udf100\": \"string\",\n        \"udf101\": \"string\",\n        \"udf102\": \"string\",\n        \"udf103\": \"string\",\n        \"udf104\": \"string\",\n        \"udf105\": \"string\",\n        \"udf106\": \"string\",\n        \"udf107\": \"string\",\n        \"udf108\": \"string\",\n        \"udf109\": \"string\",\n        \"udf110\": \"string\",\n        \"udf111\": \"string\",\n        \"udf112\": \"string\",\n        \"udf113\": \"string\",\n        \"udf114\": \"string\",\n        \"udf115\": \"string\",\n        \"udf116\": \"string\",\n        \"udf117\": \"string\",\n        \"udf118\": \"string\",\n        \"udf119\": \"string\",\n        \"udf120\": \"string\",\n        \"udf121\": \"string\",\n        \"udf122\": \"string\",\n        \"udf123\": \"string\",\n        \"udf124\": \"string\",\n        \"udf125\": \"string\",\n        \"udf126\": \"string\",\n        \"udf127\": \"string\",\n        \"udf128\": \"string\",\n        \"udf129\": \"string\",\n        \"udf130\": \"string\",\n        \"udf131\": \"string\",\n        \"udf132\": \"string\",\n        \"udf133\": \"string\",\n        \"udf134\": \"string\",\n        \"udf135\": \"string\",\n        \"udf136\": \"string\",\n        \"udf137\": \"string\",\n        \"udf138\": \"string\",\n        \"udf139\": \"string\",\n        \"udf140\": \"string\",\n        \"udf141\": \"string\",\n        \"udf142\": \"string\",\n        \"udf143\": \"string\",\n        \"udf144\": \"string\",\n        \"udf145\": \"string\",\n        \"udf146\": \"string\",\n        \"udf147\": \"string\",\n        \"udf148\": \"string\",\n        \"udf149\": \"string\",\n        \"udf150\": \"string\",\n        \"udf151\": \"string\",\n        \"udf152\": \"string\",\n        \"udf153\": \"string\",\n        \"udf154\": \"string\",\n        \"udf155\": \"string\",\n        \"udf156\": \"string\",\n        \"udf157\": \"string\",\n        \"udf158\": \"string\",\n        \"udf159\": \"string\",\n        \"udf160\": \"string\",\n        \"udf161\": \"string\",\n        \"udf162\": \"string\",\n        \"udf163\": \"string\",\n        \"udf164\": \"string\",\n        \"udf165\": \"string\",\n        \"udf166\": \"string\",\n        \"udf167\": \"string\",\n        \"udf168\": \"string\",\n        \"udf169\": \"string\",\n        \"udf170\": \"string\",\n        \"udf171\": \"string\",\n        \"udf172\": \"string\",\n        \"udf173\": \"string\",\n        \"udf174\": \"string\",\n        \"udf175\": \"string\",\n        \"udf176\": \"string\",\n        \"udf177\": \"string\",\n        \"udf178\": \"string\",\n        \"udf179\": \"string\",\n        \"udf180\": \"string\",\n        \"udf181\": \"string\",\n        \"udf182\": \"string\",\n        \"udf183\": \"string\",\n        \"udf184\": \"string\",\n        \"udf185\": \"string\",\n        \"udf186\": \"string\",\n        \"udf187\": \"string\",\n        \"udf188\": \"string\",\n        \"udf189\": \"string\",\n        \"udf190\": \"string\",\n        \"udf191\": \"string\",\n        \"udf192\": \"string\",\n        \"udf193\": \"string\",\n        \"udf194\": \"string\",\n        \"udf195\": \"string\",\n        \"udf196\": \"string\",\n        \"udf197\": \"string\",\n        \"udf198\": \"string\",\n        \"udf199\": \"string\",\n        \"udf200\": \"string\",\n        \"udf201\": \"string\",\n        \"udf202\": \"string\",\n        \"udf203\": \"string\",\n        \"udf204\": \"string\",\n        \"udf205\": \"string\",\n        \"udf206\": \"string\",\n        \"udf207\": \"string\",\n        \"udf208\": \"string\",\n        \"udf209\": \"string\",\n        \"udf210\": \"string\",\n        \"udf211\": \"string\",\n        \"udf212\": \"string\",\n        \"udf213\": \"string\",\n        \"udf214\": \"string\",\n        \"udf215\": \"string\",\n        \"udf216\": \"string\",\n        \"udf217\": \"string\",\n        \"udf218\": \"string\",\n        \"udf219\": \"string\",\n        \"udf220\": \"string\",\n        \"udf221\": \"string\",\n        \"udf222\": \"string\",\n        \"udf223\": \"string\",\n        \"udf224\": \"string\",\n        \"udf225\": \"string\",\n        \"udf226\": \"string\",\n        \"udf227\": \"string\",\n        \"udf228\": \"string\",\n        \"udf229\": \"string\",\n        \"udf230\": \"string\",\n        \"udf231\": \"string\",\n        \"udf232\": \"string\",\n        \"udf233\": \"string\",\n        \"udf234\": \"string\",\n        \"udf235\": \"string\",\n        \"udf236\": \"string\",\n        \"udf237\": \"string\",\n        \"udf238\": \"string\",\n        \"udf239\": \"string\",\n        \"udf240\": \"string\",\n        \"udf241\": \"string\",\n        \"udf242\": \"string\",\n        \"udf243\": \"string\",\n        \"udf244\": \"string\",\n        \"udf245\": \"string\",\n        \"udf246\": \"string\",\n        \"udf247\": \"string\",\n        \"udf248\": \"string\",\n        \"udf249\": \"string\",\n        \"udf250\": \"string\",\n        \"udf251\": \"string\",\n        \"udf252\": \"string\",\n        \"udf253\": \"string\",\n        \"udf254\": \"string\",\n        \"udf255\": \"string\",\n        \"udf256\": \"string\",\n        \"udf257\": \"string\",\n        \"udf258\": \"string\",\n        \"udf259\": \"string\",\n        \"udf260\": \"string\",\n        \"udf261\": \"string\",\n        \"udf262\": \"string\",\n        \"udf263\": \"string\",\n        \"udf264\": \"string\",\n        \"udf265\": \"string\",\n        \"udf266\": \"string\",\n        \"udf267\": \"string\",\n        \"udf268\": \"string\",\n        \"udf269\": \"string\",\n        \"udf270\": \"string\",\n        \"udf271\": \"string\",\n        \"udf272\": \"string\",\n        \"udf273\": \"string\",\n        \"udf274\": \"string\",\n        \"udf275\": \"string\",\n        \"udf276\": \"string\",\n        \"udf277\": \"string\",\n        \"udf278\": \"string\",\n        \"udf279\": \"string\",\n        \"udf280\": \"string\",\n        \"udf281\": \"string\",\n        \"udf282\": \"string\",\n        \"udf283\": \"string\",\n        \"udf284\": \"string\",\n        \"udf285\": \"string\",\n        \"udf286\": \"string\",\n        \"udf287\": \"string\",\n        \"udf288\": \"string\",\n        \"udf289\": \"string\",\n        \"udf290\": \"string\",\n        \"udf291\": \"string\",\n        \"udf292\": \"string\",\n        \"udf293\": \"string\",\n        \"udf294\": \"string\",\n        \"udf295\": \"string\",\n        \"udf296\": \"string\",\n        \"udf297\": \"string\",\n        \"udf298\": \"string\",\n        \"udf299\": \"string\",\n        \"udf300\": \"string\"\n      },\n      \"snmpEnabled\": true,\n      \"deviceClass\": \"rmmnetworkdevice\",\n      \"portalUrl\": \"string\",\n      \"warrantyDate\": \"string\",\n      \"antivirus\": {\n        \"antivirusProduct\": \"string\",\n        \"antivirusStatus\": \"NotRunning\"\n      },\n      \"patchManagement\": {\n        \"patchStatus\": \"RebootRequired\",\n        \"patchesApprovedPending\": 5064,\n        \"patchesNotApproved\": 2582,\n        \"patchesInstalled\": 8592\n      },\n      \"softwareStatus\": \"string\",\n      \"webRemoteUrl\": \"string\",\n      \"networkProbe\": false,\n      \"onboardedViaNetworkMonitor\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ed01679d-18d3-4f02-9531-8ad6df9a21ae",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "filterId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hostname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operatingSystem",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e0ce6a6a-57a6-4227-a841-bf068894761a",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "filterId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hostname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "deviceType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "operatingSystem",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteName",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02fa92ae-4d33-423a-8d54-8c6a8f54874e",
+          "name": "Fetches the components records of the authenticated user's account.",
+          "request": {
+            "name": "Fetches the components records of the authenticated user's account.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "components"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59392c59-01b2-4fce-85a2-52e6848b86d7",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "components"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 1522,\n    \"totalCount\": 5624,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"components\": [\n    {\n      \"id\": 2636,\n      \"credentialsRequired\": true,\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"categoryCode\": \"string\",\n      \"variables\": [\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 6290\n        },\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 846\n        }\n      ]\n    },\n    {\n      \"id\": 9591,\n      \"credentialsRequired\": true,\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"categoryCode\": \"string\",\n      \"variables\": [\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 4608\n        },\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": true,\n          \"description\": \"string\",\n          \"variablesIdx\": 3268\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7196fa87-af4b-4cf3-b8ee-a45203494eed",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "components"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 1522,\n    \"totalCount\": 5624,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"components\": [\n    {\n      \"id\": 2636,\n      \"credentialsRequired\": true,\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"categoryCode\": \"string\",\n      \"variables\": [\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 6290\n        },\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 846\n        }\n      ]\n    },\n    {\n      \"id\": 9591,\n      \"credentialsRequired\": true,\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"categoryCode\": \"string\",\n      \"variables\": [\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": false,\n          \"description\": \"string\",\n          \"variablesIdx\": 4608\n        },\n        {\n          \"name\": \"string\",\n          \"defaultVal\": \"string\",\n          \"type\": \"string\",\n          \"direction\": true,\n          \"description\": \"string\",\n          \"variablesIdx\": 3268\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cebf4c7a-0774-466c-82b2-94c2e4ae00ab",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "components"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1563999f-f4a1-47fe-a54e-99eb8e26d78e",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "components"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "529d0697-1ff6-441e-a56a-a229984bbd88",
+          "name": "Fetches resolved alerts of the authenticated user's account.",
+          "request": {
+            "name": "Fetches resolved alerts of the authenticated user's account.",
+            "description": {
+              "content": "If the muted parameter is not provided, both muted and umuted alerts will be queried.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "alerts",
+                "resolved"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "muted",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "09179bb3-b6e1-4d79-9ee4-cf0c774adfb5",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "resolved"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 423,\n    \"totalCount\": 1196,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"alerts\": [\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Low\",\n      \"diagnostics\": \"string\",\n      \"resolved\": false,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"1993-07-28T22:31:49.747Z\",\n      \"muted\": true,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1979-10-11T14:11:06.402Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": false\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"UNINSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"1963-05-17T09:07:48.295Z\",\n          \"actionType\": \"TICKET_CREATED\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"1955-02-20T19:55:45.258Z\",\n          \"actionType\": \"TICKET_PENDING\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 8374\n    },\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Information\",\n      \"diagnostics\": \"string\",\n      \"resolved\": true,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"2004-08-27T14:28:16.409Z\",\n      \"muted\": false,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1985-06-20T09:15:31.240Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": true\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"INSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"2016-02-24T23:32:22.827Z\",\n          \"actionType\": \"EMAIL_SEND_ERROR\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"2007-03-23T21:39:22.571Z\",\n          \"actionType\": \"EMAIL_SENT\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 3717\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "78a7eeeb-808a-4da2-adfb-5ba9a25498b3",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "resolved"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 423,\n    \"totalCount\": 1196,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"alerts\": [\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Low\",\n      \"diagnostics\": \"string\",\n      \"resolved\": false,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"1993-07-28T22:31:49.747Z\",\n      \"muted\": true,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1979-10-11T14:11:06.402Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": false\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"UNINSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"1963-05-17T09:07:48.295Z\",\n          \"actionType\": \"TICKET_CREATED\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"1955-02-20T19:55:45.258Z\",\n          \"actionType\": \"TICKET_PENDING\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 8374\n    },\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Information\",\n      \"diagnostics\": \"string\",\n      \"resolved\": true,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"2004-08-27T14:28:16.409Z\",\n      \"muted\": false,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1985-06-20T09:15:31.240Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": true\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"INSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"2016-02-24T23:32:22.827Z\",\n          \"actionType\": \"EMAIL_SEND_ERROR\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"2007-03-23T21:39:22.571Z\",\n          \"actionType\": \"EMAIL_SENT\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 3717\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b172037d-c0a2-469e-99d6-8835a010201e",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "resolved"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8977cd6a-0f35-4af4-98f4-103acf6ca770",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "resolved"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db5bdf23-ca4e-4e9b-87c4-22f54dee0b4a",
+          "name": "Fetches open alerts of the authenticated user's account.",
+          "request": {
+            "name": "Fetches open alerts of the authenticated user's account.",
+            "description": {
+              "content": "If the muted parameter is not provided, both muted and umuted alerts will be queried.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "account",
+                "alerts",
+                "open"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "muted",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aafc9c6d-48e4-44d5-8e75-7af19968ce14",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "open"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 423,\n    \"totalCount\": 1196,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"alerts\": [\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Low\",\n      \"diagnostics\": \"string\",\n      \"resolved\": false,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"1993-07-28T22:31:49.747Z\",\n      \"muted\": true,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1979-10-11T14:11:06.402Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": false\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"UNINSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"1963-05-17T09:07:48.295Z\",\n          \"actionType\": \"TICKET_CREATED\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"1955-02-20T19:55:45.258Z\",\n          \"actionType\": \"TICKET_PENDING\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 8374\n    },\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Information\",\n      \"diagnostics\": \"string\",\n      \"resolved\": true,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"2004-08-27T14:28:16.409Z\",\n      \"muted\": false,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1985-06-20T09:15:31.240Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": true\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"INSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"2016-02-24T23:32:22.827Z\",\n          \"actionType\": \"EMAIL_SEND_ERROR\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"2007-03-23T21:39:22.571Z\",\n          \"actionType\": \"EMAIL_SENT\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 3717\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17a2b77d-8b10-48e9-9618-a79f84164560",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "open"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 423,\n    \"totalCount\": 1196,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"alerts\": [\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Low\",\n      \"diagnostics\": \"string\",\n      \"resolved\": false,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"1993-07-28T22:31:49.747Z\",\n      \"muted\": true,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1979-10-11T14:11:06.402Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": false\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"UNINSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"1963-05-17T09:07:48.295Z\",\n          \"actionType\": \"TICKET_CREATED\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"1955-02-20T19:55:45.258Z\",\n          \"actionType\": \"TICKET_PENDING\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 8374\n    },\n    {\n      \"alertUid\": \"string\",\n      \"priority\": \"Information\",\n      \"diagnostics\": \"string\",\n      \"resolved\": true,\n      \"resolvedBy\": \"string\",\n      \"resolvedOn\": \"2004-08-27T14:28:16.409Z\",\n      \"muted\": false,\n      \"ticketNumber\": \"string\",\n      \"timestamp\": \"1985-06-20T09:15:31.240Z\",\n      \"alertMonitorInfo\": {\n        \"sendsEmails\": false,\n        \"createsTicket\": true\n      },\n      \"alertContext\": {\n        \"@class\": \"string\",\n        \"packageName\": \"string\",\n        \"actionType\": \"INSTALLED\",\n        \"prevVersion\": \"string\",\n        \"version\": \"string\"\n      },\n      \"alertSourceInfo\": {\n        \"deviceUid\": \"string\",\n        \"deviceName\": \"string\",\n        \"siteUid\": \"string\",\n        \"siteName\": \"string\"\n      },\n      \"responseActions\": [\n        {\n          \"actionTime\": \"2016-02-24T23:32:22.827Z\",\n          \"actionType\": \"EMAIL_SEND_ERROR\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        },\n        {\n          \"actionTime\": \"2007-03-23T21:39:22.571Z\",\n          \"actionType\": \"EMAIL_SENT\",\n          \"description\": \"string\",\n          \"actionReference\": \"string\",\n          \"actionReferenceInt\": \"string\"\n        }\n      ],\n      \"autoresolveMins\": 3717\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e6f9a950-d6e9-4e70-b54c-f73fbe79cc8f",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "open"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fbaab5ab-1218-4fdd-b0c7-2b461653c32c",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "account",
+                    "alerts",
+                    "open"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "muted",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://concord-api.centrastage.net/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "53e939fa-4b39-4098-989d-2710cfc55076",
+    "name": "Datto RMM /v2/account /v2/account /v2/account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Datto RMM (Remote Monitoring and Management) REST API",
+      "type": "text/plain"
+    }
+  }
+}

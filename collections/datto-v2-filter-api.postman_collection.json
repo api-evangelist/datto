@@ -1,0 +1,466 @@
+{
+  "item": [
+    {
+      "id": "7e70aa75-544f-4aab-9643-3b0865ad4ba0",
+      "name": "/v2/filter",
+      "description": {
+        "content": "Operations on filters",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "689cba30-06e5-4537-86dc-fd38abce29be",
+          "name": "Fetches the default device filters.",
+          "request": {
+            "name": "Fetches the default device filters.",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "filter",
+                "default-filters"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "47803d2b-2047-462c-abe4-ae7358342f32",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "default-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7180,\n    \"totalCount\": 1656,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"filters\": [\n    {\n      \"id\": 84,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1964-07-24T17:14:21.547Z\",\n      \"lastUpdated\": \"1954-09-24T07:43:36.641Z\"\n    },\n    {\n      \"id\": 8803,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1952-01-07T11:15:25.345Z\",\n      \"lastUpdated\": \"1979-01-09T18:00:14.785Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9d39483c-2ebd-4826-9e5f-a60cbdfb5f6c",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "default-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7180,\n    \"totalCount\": 1656,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"filters\": [\n    {\n      \"id\": 84,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1964-07-24T17:14:21.547Z\",\n      \"lastUpdated\": \"1954-09-24T07:43:36.641Z\"\n    },\n    {\n      \"id\": 8803,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1952-01-07T11:15:25.345Z\",\n      \"lastUpdated\": \"1979-01-09T18:00:14.785Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f7320afc-0740-4596-a8a1-6a0e8dc0c3cf",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "default-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a37bcc51-8903-4002-9718-62e4b83b9560",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "default-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a5c2fbf-6b22-4a42-8eaf-7d5d0b34e5c0",
+          "name": "Fetches the custom device filters for the user (using administrator role).",
+          "request": {
+            "name": "Fetches the custom device filters for the user (using administrator role).",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "filter",
+                "custom-filters"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "691a3efe-0e2e-4378-b0c3-d6476bcab3c9",
+              "name": "Request can not be authorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "custom-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7180,\n    \"totalCount\": 1656,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"filters\": [\n    {\n      \"id\": 84,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1964-07-24T17:14:21.547Z\",\n      \"lastUpdated\": \"1954-09-24T07:43:36.641Z\"\n    },\n    {\n      \"id\": 8803,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1952-01-07T11:15:25.345Z\",\n      \"lastUpdated\": \"1979-01-09T18:00:14.785Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7ff56a44-1b5f-4d96-9915-c145f3e66284",
+              "name": "Authenticated user doesn't have access to this resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "custom-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pageDetails\": {\n    \"count\": 7180,\n    \"totalCount\": 1656,\n    \"prevPageUrl\": \"string\",\n    \"nextPageUrl\": \"string\"\n  },\n  \"filters\": [\n    {\n      \"id\": 84,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1964-07-24T17:14:21.547Z\",\n      \"lastUpdated\": \"1954-09-24T07:43:36.641Z\"\n    },\n    {\n      \"id\": 8803,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"type\": \"site\",\n      \"dateCreate\": \"1952-01-07T11:15:25.345Z\",\n      \"lastUpdated\": \"1979-01-09T18:00:14.785Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bfad64db-8ae1-4f81-be48-0d85989f6829",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "custom-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7f80b92d-68c6-43d1-b8d4-26c300cf86af",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "filter",
+                    "custom-filters"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://concord-api.centrastage.net/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "879403a2-b833-40b9-8d4d-3a79d27cea94",
+    "name": "Datto RMM /v2/account /v2/account /v2/filter API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Datto RMM (Remote Monitoring and Management) REST API",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/system API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/system",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches the system status (start date, status and version).",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/system/status"
+          },
+          "docs": "An API access token is not necessary."
+        },
+        {
+          "info": {
+            "name": "Fetches the request rate status for the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/system/request_rate"
+          },
+          "docs": "Fetches the request rate status for the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches the pagination configurations.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/system/pagination"
+          },
+          "docs": "Fetches the pagination configurations."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

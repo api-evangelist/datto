@@ -1,0 +1,386 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/site API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/site",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Creates a new site in the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://concord-api.centrastage.net/api/v2/site",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new site in the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Creates a site variable in the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/variable",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a site variable in the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches data of the site (including total number of devices) identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches data of the site (including total number of devices) identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Updates the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Updates the site variable identified by the given site Uid and variable Id.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/variable/:variableId",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the site variable identified by the given site Uid and variable Id."
+        },
+        {
+          "info": {
+            "name": "Deletes the site variable identified by the given site Uid and variable Id.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/variable/:variableId",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes the site variable identified by the given site Uid and variable Id."
+        },
+        {
+          "info": {
+            "name": "Creates/updates the proxy settings for the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/settings/proxy",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates/updates the proxy settings for the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Deletes site proxy settings for the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/settings/proxy",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes site proxy settings for the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the variables of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/variables",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the variables of the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches settings of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/settings",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches settings of the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the site device filters (that the user can see with administrator role) of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/filters",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the site device filters (that the user can see with administrator role) of the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the devices records of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/devices",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filterId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the devices records of the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the shortened devices records with network interface information of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/devices/network-interface",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the shortened devices records with network interface information of the site identified by the given site Uid."
+        },
+        {
+          "info": {
+            "name": "Fetches the resolved alerts of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/alerts/resolved",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        },
+        {
+          "info": {
+            "name": "Fetches the open alerts of the site identified by the given site Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/site/:siteUid/alerts/open",
+            "params": [
+              {
+                "name": "siteUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

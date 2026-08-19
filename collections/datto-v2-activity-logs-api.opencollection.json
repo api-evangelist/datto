@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/activity-logs API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/activity-logs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches the activity logs.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/activity-logs",
+            "params": [
+              {
+                "name": "size",
+                "value": "20",
+                "type": "query",
+                "description": "Specifies the number of records to be returned"
+              },
+              {
+                "name": "order",
+                "value": "asc",
+                "type": "query",
+                "description": "Specifies the order in which records should be returned based on their creation date"
+              },
+              {
+                "name": "searchAfter",
+                "value": "1662554037000,60761aa3-d03e-3d76-b75b-da28629a4103",
+                "type": "query",
+                "description": "Acts as a pointer to determine the starting point for returning records from the database. It is not advised to set this parameter manually. Instead, it is recommended to utilize the 'prevPage' and 'nextPage' URLs that are returned in the response where this parameter in already included."
+              },
+              {
+                "name": "page",
+                "value": "next",
+                "type": "query"
+              },
+              {
+                "name": "from",
+                "value": "2022-12-21T10:15:30Z",
+                "type": "query",
+                "description": "Defines the UTC start date for fetching data. By default API returns logs from last 15 minutes. Format: yyyy-MM-ddTHH:mm:ssZ"
+              },
+              {
+                "name": "until",
+                "value": "2023-02-25T10:15:30Z",
+                "type": "query",
+                "description": "Defines the UTC end date for fetching data. Format: yyyy-MM-ddTHH:mm:ssZ"
+              },
+              {
+                "name": "entities",
+                "value": "device",
+                "type": "query",
+                "description": "Filters the returned activity logs based on their type. It can take multiple values separated by comma"
+              },
+              {
+                "name": "categories",
+                "value": "job,device",
+                "type": "query",
+                "description": "Filters the returned activity logs based on their category. It can take multiple values separated by comma"
+              },
+              {
+                "name": "actions",
+                "value": "deployment,note",
+                "type": "query",
+                "description": "Filters the returned activity logs based on their action. It can take multiple values separated by comma"
+              },
+              {
+                "name": "siteIds",
+                "value": "4,8",
+                "type": "query",
+                "description": "Filters the returned activity logs based on the site they were created in. It can take multiple values separated by comma"
+              },
+              {
+                "name": "userIds",
+                "value": "1,4",
+                "type": "query",
+                "description": "Filters the returned activity logs based on the user they are associated with. It can take multiple values separated by comma"
+              },
+              {
+                "name": "searchQuery",
+                "value": "data.filter_id : \"filterId\" AND device.hostname : \"hostname\"",
+                "type": "query",
+                "description": "Enter queries using single words, phrases, terms containing wildcards or boolean operators, fuzzy searches, grouped searches, or special characters. See <a href=\"https://rmm.datto.com/help/en/Content/3NEWUI/Analytics/ActivityLog.htm\">Activity Log</a> for more details."
+              }
+            ]
+          },
+          "docs": "Fetches the activity logs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

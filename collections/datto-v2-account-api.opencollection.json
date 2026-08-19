@@ -1,0 +1,314 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/account API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Creates an account variable",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://concord-api.centrastage.net/api/v2/account/variable",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an account variable"
+        },
+        {
+          "info": {
+            "name": "Updates the account variable identified by the given variable Id.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://concord-api.centrastage.net/api/v2/account/variable/:variableId",
+            "params": [
+              {
+                "name": "variableId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the account variable identified by the given variable Id."
+        },
+        {
+          "info": {
+            "name": "Deletes the account variable identified by the given variable Id.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://concord-api.centrastage.net/api/v2/account/variable/:variableId",
+            "params": [
+              {
+                "name": "variableId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes the account variable identified by the given variable Id."
+        },
+        {
+          "info": {
+            "name": "Fetches the authenticated user's account data.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account"
+          },
+          "docs": "Fetches the authenticated user's account data."
+        },
+        {
+          "info": {
+            "name": "Fetches the account variables.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/variables",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the account variables."
+        },
+        {
+          "info": {
+            "name": "Fetches the authentication users records of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/users",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the authentication users records of the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches the site records of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/sites",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "siteName",
+                "value": "",
+                "type": "query",
+                "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+              }
+            ]
+          },
+          "docs": "Fetches the site records of the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches the sites records with its mapped dnet network id for the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/dnet-site-mappings",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the sites records with its mapped dnet network id for the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches the devices of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/devices",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filterId",
+                "value": "",
+                "type": "query",
+                "description": "Optional. If applied, this filter exclusively determines the results."
+              },
+              {
+                "name": "hostname",
+                "value": "",
+                "type": "query",
+                "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+              },
+              {
+                "name": "deviceType",
+                "value": "",
+                "type": "query",
+                "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+              },
+              {
+                "name": "operatingSystem",
+                "value": "",
+                "type": "query",
+                "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+              },
+              {
+                "name": "siteName",
+                "value": "",
+                "type": "query",
+                "description": "Optional. Filters results based on the provided value using the LIKE operator. Partial matches are allowed."
+              }
+            ]
+          },
+          "docs": "Fetches the devices of the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches the components records of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/components",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Fetches the components records of the authenticated user's account."
+        },
+        {
+          "info": {
+            "name": "Fetches resolved alerts of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/alerts/resolved",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        },
+        {
+          "info": {
+            "name": "Fetches open alerts of the authenticated user's account.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/account/alerts/open",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "muted",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "If the muted parameter is not provided, both muted and umuted alerts will be queried."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

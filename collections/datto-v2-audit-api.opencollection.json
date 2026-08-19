@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Datto RMM /v2/account /v2/account /v2/audit API",
+    "version": "2.0.0 (Build 201_aadf6556fb176a75fbb9b2aad0f0d2301d64c88a)"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "/v2/audit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches audit data of the printer identified the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/audit/printer/:deviceUid",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "The device class must be of type \"printer\"."
+        },
+        {
+          "info": {
+            "name": "Fetches audit data of the ESXi host identified the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/audit/esxihost/:deviceUid",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "The device class must be of type \"esxihost\"."
+        },
+        {
+          "info": {
+            "name": "Fetches audit data of the generic device identified the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/audit/device/:deviceUid",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "The device class must be of type \"device\"."
+        },
+        {
+          "info": {
+            "name": "Fetches audited software of the generic device identified the given device Uid.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/audit/device/:deviceUid/software",
+            "params": [
+              {
+                "name": "deviceUid",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "The device class must be of type \"device\"."
+        },
+        {
+          "info": {
+            "name": "Fetches audit data of the generic device(s) identified the given MAC address in format: XXXXXXXXXXXX",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://concord-api.centrastage.net/api/v2/audit/device/macAddress/:macAddress",
+            "params": [
+              {
+                "name": "macAddress",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "The device class must be of type \"device\"."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

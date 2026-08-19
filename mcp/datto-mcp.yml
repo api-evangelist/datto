@@ -301,3 +301,9 @@ tools:
   source_operation: openapi/datto-rmm-openapi.json#getUserAccountOpenAlerts
   method: GET
   path: /v2/account/alerts/open
+deployment:
+  mode: none
+  verified: derived
+  tools: 57
+  checked: '2026-08-12'
+  source: catalog MCP census
