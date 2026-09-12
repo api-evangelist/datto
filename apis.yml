@@ -292,6 +292,8 @@ apis:
   - type: Conventions
     url: conventions/datto-conventions.yml
 common:
+- type: Website
+  url: https://www.datto.com/
 - type: Overlay
   url: overlays/datto-rmm-overlay.yaml
 - type: DeveloperPortal
