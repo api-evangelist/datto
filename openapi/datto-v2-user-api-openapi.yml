@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Datto RMM /v2/account /v2/account /v2/user API
+  title: Datto RMM /v2/user API
   description: Datto RMM (Remote Monitoring and Management) REST API
   license:
     name: '©Datto, Inc. - All rights reserved. '
@@ -17,7 +17,7 @@ paths:
     post:
       tags:
       - /v2/user
-      summary: Resets the authenticated user's API access and secret keys.
+      summary: Resets the authenticated user's API access and secret keys
       operationId: resetApiKeys
       responses:
         '500':

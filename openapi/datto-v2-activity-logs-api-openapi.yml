@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Datto RMM /v2/account /v2/account /v2/activity-logs API
+  title: Datto RMM /v2/activity Logs API
   description: Datto RMM (Remote Monitoring and Management) REST API
   license:
     name: '©Datto, Inc. - All rights reserved. '
@@ -17,7 +17,7 @@ paths:
     get:
       tags:
       - /v2/activity-logs
-      summary: Fetches the activity logs.
+      summary: Fetches the activity logs
       operationId: getActivities
       parameters:
       - name: size
@@ -149,18 +149,14 @@ paths:
           description: Request parameters are invalid.
 components:
   schemas:
-    UserDto:
+    SiteBasicDto:
       type: object
-      description: User information
+      description: Site information
       properties:
         id:
           type: integer
           format: int64
-        userName:
-          type: string
-        firstName:
-          type: string
-        lastName:
+        name:
           type: string
     ActivityLogsPage:
       type: object
@@ -175,15 +171,6 @@ components:
         error:
           type: string
           description: Shows error information when request fails at the database layer
-    SiteBasicDto:
-      type: object
-      description: Site information
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
     ActivityLog:
       type: object
       description: Activity log data
@@ -203,7 +190,7 @@ components:
           type: number
           format: double
           description: Activity Log creation unix timestamp
-          example: 1.689072497714E9
+          example: 1689072497.714
           pattern: seconds.nanoseconds
         site:
           $ref: '#/components/schemas/SiteBasicDto'
@@ -220,6 +207,19 @@ components:
           type: boolean
         hasStdErr:
           type: boolean
+    UserDto:
+      type: object
+      description: User information
+      properties:
+        id:
+          type: integer
+          format: int64
+        userName:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
     PaginationData:
       type: object
       description: Pagination data

@@ -1,16 +1,7 @@
 {
   "provider": "datto",
   "sources": [
-    "datto-v2-account-api-openapi.yml",
-    "datto-v2-activity-logs-api-openapi.yml",
-    "datto-v2-alert-api-openapi.yml",
-    "datto-v2-audit-api-openapi.yml",
-    "datto-v2-device-api-openapi.yml",
-    "datto-v2-filter-api-openapi.yml",
-    "datto-v2-job-api-openapi.yml",
-    "datto-v2-site-api-openapi.yml",
-    "datto-v2-system-api-openapi.yml",
-    "datto-v2-user-api-openapi.yml"
+    "_original/datto-rmm-openapi.json"
   ],
   "outputs": [
     "datto-v2-account-api-openapi.yml",
@@ -27,6 +18,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "datto-rmm-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0; renamed 4 component key(s) illegal in 3.x (e.g. Account Descriptor)",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "datto-v2-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-activity-logs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-alert-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-audit-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-device-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-filter-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-job-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-site-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-system-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datto-v2-user-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

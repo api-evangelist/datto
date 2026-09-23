@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Datto RMM /v2/account /v2/account /v2/system API
+  title: Datto RMM /v2/system API
   description: Datto RMM (Remote Monitoring and Management) REST API
   license:
     name: '©Datto, Inc. - All rights reserved. '
@@ -17,7 +17,7 @@ paths:
     get:
       tags:
       - /v2/system
-      summary: Fetches the system status (start date, status and version).
+      summary: Fetches the system status (start date, status and version)
       description: An API access token is not necessary.
       operationId: getStatus
       responses:
@@ -35,7 +35,7 @@ paths:
     get:
       tags:
       - /v2/system
-      summary: Fetches the request rate status for the authenticated user's account.
+      summary: Fetches the request rate status for the authenticated user's account
       operationId: get
       responses:
         '500':
@@ -58,7 +58,7 @@ paths:
     get:
       tags:
       - /v2/system
-      summary: Fetches the pagination configurations.
+      summary: Fetches the pagination configurations
       operationId: getPaginationConfigurations
       responses:
         '500':
