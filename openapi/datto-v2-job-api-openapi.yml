@@ -229,57 +229,6 @@ paths:
                 $ref: '#/components/schemas/JobComponentsPage'
 components:
   schemas:
-    JobComponent:
-      type: object
-      description: Job component data
-      properties:
-        uid:
-          type: string
-        name:
-          type: string
-        variables:
-          type: array
-          items:
-            $ref: '#/components/schemas/JobComponentVariable'
-    JobComponentsPage:
-      type: object
-      description: Job components page
-      properties:
-        pageDetails:
-          $ref: '#/components/schemas/PaginationData'
-        jobComponents:
-          type: array
-          items:
-            $ref: '#/components/schemas/JobComponent'
-    JobStdData:
-      type: object
-      description: Job Std data
-      properties:
-        componentUid:
-          type: string
-        componentName:
-          type: string
-        stdData:
-          type: string
-    Job:
-      type: object
-      description: Job data
-      properties:
-        id:
-          type: integer
-          format: int64
-        dateCreated:
-          type: string
-          format: date-time
-        name:
-          type: string
-        uid:
-          type: string
-        status:
-          type: string
-          enum:
-          - active
-          - completed
     PaginationData:
       type: object
       description: Pagination data
@@ -294,6 +243,26 @@ components:
           type: string
         nextPageUrl:
           type: string
+    JobComponentResult:
+      type: object
+      description: Job component result data
+      properties:
+        componentUid:
+          type: string
+        componentName:
+          type: string
+        componentStatus:
+          type: string
+          enum:
+          - Success
+          - Failure
+        numberOfWarnings:
+          type: integer
+          format: int32
+        hasStdOut:
+          type: boolean
+        hasStdErr:
+          type: boolean
     JobComponentVariable:
       type: object
       description: Job component variable data
@@ -329,23 +298,54 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/JobComponentResult'
-    JobComponentResult:
+    Job:
       type: object
-      description: Job component result data
+      description: Job data
+      properties:
+        id:
+          type: integer
+          format: int64
+        dateCreated:
+          type: string
+          format: date-time
+        name:
+          type: string
+        uid:
+          type: string
+        status:
+          type: string
+          enum:
+          - active
+          - completed
+    JobStdData:
+      type: object
+      description: Job Std data
       properties:
         componentUid:
           type: string
         componentName:
           type: string
-        componentStatus:
+        stdData:
           type: string
-          enum:
-          - Success
-          - Failure
-        numberOfWarnings:
-          type: integer
-          format: int32
-        hasStdOut:
-          type: boolean
-        hasStdErr:
-          type: boolean
+    JobComponent:
+      type: object
+      description: Job component data
+      properties:
+        uid:
+          type: string
+        name:
+          type: string
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobComponentVariable'
+    JobComponentsPage:
+      type: object
+      description: Job components page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        jobComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobComponent'

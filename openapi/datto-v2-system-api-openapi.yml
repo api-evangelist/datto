@@ -79,6 +79,15 @@ paths:
                 $ref: '#/components/schemas/PaginationConfiguration'
 components:
   schemas:
+    OperationRateStatus:
+      type: object
+      properties:
+        limit:
+          type: integer
+          format: int32
+        count:
+          type: integer
+          format: int32
     RateStatusResponse:
       type: object
       properties:
@@ -124,12 +133,3 @@ components:
         started:
           type: string
           format: date-time
-    OperationRateStatus:
-      type: object
-      properties:
-        limit:
-          type: integer
-          format: int32
-        count:
-          type: integer
-          format: int32

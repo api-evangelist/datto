@@ -171,20 +171,6 @@ components:
           format: int64
         name:
           type: string
-    PaginationData:
-      type: object
-      description: Pagination data
-      properties:
-        count:
-          type: integer
-          format: int32
-        totalCount:
-          type: integer
-          format: int64
-        prevPageUrl:
-          type: string
-        nextPageUrl:
-          type: string
     ActivityLogsPage:
       type: object
       description: Activity logs page
@@ -234,3 +220,17 @@ components:
           type: boolean
         hasStdErr:
           type: boolean
+    PaginationData:
+      type: object
+      description: Pagination data
+      properties:
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string
