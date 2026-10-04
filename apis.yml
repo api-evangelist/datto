@@ -292,6 +292,9 @@ apis:
   - type: Conventions
     url: conventions/datto-conventions.yml
 common:
+- type: CapabilityMap
+  url: capabilities/datto-capability-edges.yml
+  name: Datto Business Capability Map
 - type: Website
   url: https://www.datto.com/
 - type: Overlay

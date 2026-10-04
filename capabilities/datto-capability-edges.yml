@@ -1,0 +1,34 @@
+slug: datto
+provider: Datto
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: /v2/alert
+  spec_file: datto-v2-alert-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.75
+  evidence: POST /v2/alert/{alertUid}/resolve  resolveAlert  Resolves the alert identified by the given
+    alert Uid
+  reason: 'Alerts here are RMM monitoring alerts (schemas: DiskHealthContext, TemperatureContext, EventLogContext)
+    that are muted and resolved — IT operations monitoring, not any financial-crime or business alerting.'
+- tag: /v2/job
+  spec_file: datto-v2-job-api-openapi.yml
+  capability_id: BC-600.40
+  capability_id_l1: BC-600
+  capability_name: IT Operations Management
+  confidence: 0.7
+  evidence: GET /v2/job/{jobUid}/results/{deviceUid}/stdout  getStdOut  Fetches data of the job's StdOut
+  reason: Jobs are automation/script component executions against managed devices with stdout/stderr results
+    — IT operations automation within the RMM platform.
