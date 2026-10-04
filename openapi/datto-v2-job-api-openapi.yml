@@ -229,20 +229,6 @@ paths:
                 $ref: '#/components/schemas/JobComponentsPage'
 components:
   schemas:
-    PaginationData:
-      type: object
-      description: Pagination data
-      properties:
-        count:
-          type: integer
-          format: int32
-        totalCount:
-          type: integer
-          format: int64
-        prevPageUrl:
-          type: string
-        nextPageUrl:
-          type: string
     JobComponentResult:
       type: object
       description: Job component result data
@@ -263,6 +249,32 @@ components:
           type: boolean
         hasStdErr:
           type: boolean
+    JobComponent:
+      type: object
+      description: Job component data
+      properties:
+        uid:
+          type: string
+        name:
+          type: string
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobComponentVariable'
+    PaginationData:
+      type: object
+      description: Pagination data
+      properties:
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string
     JobComponentVariable:
       type: object
       description: Job component variable data
@@ -298,6 +310,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/JobComponentResult'
+    JobStdData:
+      type: object
+      description: Job Std data
+      properties:
+        componentUid:
+          type: string
+        componentName:
+          type: string
+        stdData:
+          type: string
     Job:
       type: object
       description: Job data
@@ -317,28 +339,6 @@ components:
           enum:
           - active
           - completed
-    JobStdData:
-      type: object
-      description: Job Std data
-      properties:
-        componentUid:
-          type: string
-        componentName:
-          type: string
-        stdData:
-          type: string
-    JobComponent:
-      type: object
-      description: Job component data
-      properties:
-        uid:
-          type: string
-        name:
-          type: string
-        variables:
-          type: array
-          items:
-            $ref: '#/components/schemas/JobComponentVariable'
     JobComponentsPage:
       type: object
       description: Job components page

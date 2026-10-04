@@ -149,28 +149,6 @@ paths:
           description: Request parameters are invalid.
 components:
   schemas:
-    UserDto:
-      type: object
-      description: User information
-      properties:
-        id:
-          type: integer
-          format: int64
-        userName:
-          type: string
-        firstName:
-          type: string
-        lastName:
-          type: string
-    SiteBasicDto:
-      type: object
-      description: Site information
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
     ActivityLogsPage:
       type: object
       description: Activity logs page
@@ -184,6 +162,33 @@ components:
         error:
           type: string
           description: Shows error information when request fails at the database layer
+    UserDto:
+      type: object
+      description: User information
+      properties:
+        id:
+          type: integer
+          format: int64
+        userName:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+    PaginationData:
+      type: object
+      description: Pagination data
+      properties:
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string
     ActivityLog:
       type: object
       description: Activity log data
@@ -220,17 +225,12 @@ components:
           type: boolean
         hasStdErr:
           type: boolean
-    PaginationData:
+    SiteBasicDto:
       type: object
-      description: Pagination data
+      description: Site information
       properties:
-        count:
-          type: integer
-          format: int32
-        totalCount:
+        id:
           type: integer
           format: int64
-        prevPageUrl:
-          type: string
-        nextPageUrl:
+        name:
           type: string

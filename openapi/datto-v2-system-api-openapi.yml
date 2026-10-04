@@ -88,6 +88,14 @@ components:
         count:
           type: integer
           format: int32
+    PaginationConfiguration:
+      type: object
+      description: Pagination configuration
+      properties:
+        max:
+          type: integer
+          format: int32
+          description: Default and maximum number of elements per AEM page (except alerts pagination)
     RateStatusResponse:
       type: object
       properties:
@@ -115,14 +123,6 @@ components:
           type: object
           additionalProperties:
             $ref: '#/components/schemas/OperationRateStatus'
-    PaginationConfiguration:
-      type: object
-      description: Pagination configuration
-      properties:
-        max:
-          type: integer
-          format: int32
-          description: Default and maximum number of elements per AEM page (except alerts pagination)
     StatusResponse:
       type: object
       properties:
