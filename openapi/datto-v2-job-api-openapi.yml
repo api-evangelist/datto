@@ -229,6 +229,28 @@ paths:
                 $ref: '#/components/schemas/JobComponentsPage'
 components:
   schemas:
+    JobComponentVariable:
+      type: object
+      description: Job component variable data
+      properties:
+        name:
+          type: string
+          description: Variable name has to match one of component's variables
+        value:
+          type: string
+          description: Value has to be convertible to the type specified in component variable
+    JobComponent:
+      type: object
+      description: Job component data
+      properties:
+        uid:
+          type: string
+        name:
+          type: string
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobComponentVariable'
     JobComponentResult:
       type: object
       description: Job component result data
@@ -249,42 +271,6 @@ components:
           type: boolean
         hasStdErr:
           type: boolean
-    JobComponent:
-      type: object
-      description: Job component data
-      properties:
-        uid:
-          type: string
-        name:
-          type: string
-        variables:
-          type: array
-          items:
-            $ref: '#/components/schemas/JobComponentVariable'
-    PaginationData:
-      type: object
-      description: Pagination data
-      properties:
-        count:
-          type: integer
-          format: int32
-        totalCount:
-          type: integer
-          format: int64
-        prevPageUrl:
-          type: string
-        nextPageUrl:
-          type: string
-    JobComponentVariable:
-      type: object
-      description: Job component variable data
-      properties:
-        name:
-          type: string
-          description: Variable name has to match one of component's variables
-        value:
-          type: string
-          description: Value has to be convertible to the type specified in component variable
     JobResults:
       type: object
       description: Job results data
@@ -320,6 +306,16 @@ components:
           type: string
         stdData:
           type: string
+    JobComponentsPage:
+      type: object
+      description: Job components page
+      properties:
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        jobComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobComponent'
     Job:
       type: object
       description: Job data
@@ -339,13 +335,17 @@ components:
           enum:
           - active
           - completed
-    JobComponentsPage:
+    PaginationData:
       type: object
-      description: Job components page
+      description: Pagination data
       properties:
-        pageDetails:
-          $ref: '#/components/schemas/PaginationData'
-        jobComponents:
-          type: array
-          items:
-            $ref: '#/components/schemas/JobComponent'
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string

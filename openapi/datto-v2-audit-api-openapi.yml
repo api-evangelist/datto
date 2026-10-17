@@ -229,175 +229,11 @@ paths:
           description: Request can not be authorized.
 components:
   schemas:
-    BaseBoard:
+    NetworkInterface:
       type: object
-      description: Baseboard audit data
+      description: Network interface audit data
       properties:
-        manufacturer:
-          type: string
-        product:
-          type: string
-    PrinterAudit:
-      type: object
-      description: Printer audit data
-      properties:
-        portalUrl:
-          type: string
-        snmpInfo:
-          $ref: '#/components/schemas/SnmpInfo'
-        printerMarkerSupplies:
-          type: array
-          items:
-            $ref: '#/components/schemas/PrinterMarkerSupply'
-        printer:
-          $ref: '#/components/schemas/Printer'
-        systemInfo:
-          $ref: '#/components/schemas/PrinterSystemInfo'
-        nics:
-          type: array
-          items:
-            $ref: '#/components/schemas/NetworkInterface'
-    Software:
-      type: object
-      description: Software audit data
-      properties:
-        name:
-          type: string
-        version:
-          type: string
-    VideoBoard:
-      type: object
-      description: Videoboard audit data
-      properties:
-        displayAdapter:
-          type: string
-    PrinterMarkerSupply:
-      type: object
-      description: Printer marker supply audit data
-      properties:
-        description:
-          type: string
-        maxCapacity:
-          type: string
-        suppliesLevel:
-          type: string
-    Printer:
-      type: object
-      description: Printer audit data
-      properties:
-        printedPageCount:
-          type: integer
-          format: int64
-    Processor:
-      type: object
-      description: Processor audit data
-      properties:
-        name:
-          type: string
-    ESXiHostAudit:
-      type: object
-      description: ESXi Host audit data
-      properties:
-        portalUrl:
-          type: string
-        systemInfo:
-          $ref: '#/components/schemas/ESXiSystemInfo'
-        guests:
-          type: array
-          items:
-            $ref: '#/components/schemas/Guest'
-        processors:
-          type: array
-          items:
-            $ref: '#/components/schemas/ESXiProcessor'
-        nics:
-          type: array
-          items:
-            $ref: '#/components/schemas/ESXiNic'
-        physicalMemory:
-          type: array
-          items:
-            $ref: '#/components/schemas/PhysicalMemory'
-        datastores:
-          type: array
-          items:
-            $ref: '#/components/schemas/ESXiDatastore'
-    ESXiDatastore:
-      type: object
-      description: ESXi datastore audit data
-      properties:
-        datastoreName:
-          type: string
-        subscriptionPercent:
-          type: integer
-          format: int32
-        freeSpace:
-          type: integer
-          format: int64
-        size:
-          type: integer
-          format: int64
-        fileSystem:
-          type: string
-        status:
-          type: string
-        dataExtents:
-          type: array
-          items:
-            $ref: '#/components/schemas/ESXiDataExtent'
-    SnmpInfo:
-      type: object
-      description: SNMP info audit data
-      properties:
-        snmpName:
-          type: string
-        snmpContact:
-          type: string
-        snmpDescription:
-          type: string
-        snmpLocation:
-          type: string
-        snmpUptime:
-          type: string
-        nicManufacturer:
-          type: string
-        objectId:
-          type: string
-        snmpSerial:
-          type: string
-    LogicalDisk:
-      type: object
-      description: Logical disk audit data
-      properties:
-        description:
-          type: string
-        diskIdentifier:
-          type: string
-        freespace:
-          type: integer
-          format: int64
-        size:
-          type: integer
-          format: int64
-    PaginationData:
-      type: object
-      description: Pagination data
-      properties:
-        count:
-          type: integer
-          format: int32
-        totalCount:
-          type: integer
-          format: int64
-        prevPageUrl:
-          type: string
-        nextPageUrl:
-          type: string
-    ESXiNic:
-      type: object
-      description: ESXi newtwork adapter audit data
-      properties:
-        name:
+        instance:
           type: string
         ipv4:
           type: string
@@ -405,30 +241,7 @@ components:
           type: string
         macAddress:
           type: string
-        speed:
-          type: string
         type:
-          type: string
-    AttachedDevice:
-      type: object
-      description: Attached device audit data
-      properties:
-        deviceName:
-          type: string
-        deviceType:
-          type: string
-        driverFile:
-          type: string
-        driverFileLastModified:
-          type: string
-          format: date-time
-        driverManufacturer:
-          type: string
-        driverName:
-          type: string
-        driverVersion:
-          type: string
-        portName:
           type: string
     DeviceAudit:
       type: object
@@ -478,36 +291,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PhysicalMemory'
-    MobileInfo:
-      type: object
-      description: Mobile info audit data
-      properties:
-        iccid:
-          type: string
-        imei:
-          type: string
-        number:
-          type: string
-        operator:
-          type: string
-    SystemInfo:
-      type: object
-      description: System info audit data
-      properties:
-        manufacturer:
-          type: string
-        model:
-          type: string
-        totalPhysicalMemory:
-          type: integer
-          format: int64
-        username:
-          type: string
-        dotNetVersion:
-          type: string
-        totalCpuCores:
-          type: integer
-          format: int32
     PrinterSystemInfo:
       type: object
       description: Printer system info audit data
@@ -516,34 +299,16 @@ components:
           type: string
         model:
           type: string
-    ESXiSystemInfo:
+    SoftwarePage:
       type: object
-      description: ESXi host system info audit data
+      description: Software page
       properties:
-        manufacturer:
-          type: string
-        model:
-          type: string
-        name:
-          type: string
-        numberOfSnapshots:
-          type: integer
-          format: int32
-        serviceTag:
-          type: string
-    Bios:
-      type: object
-      description: Bios audit data
-      properties:
-        instance:
-          type: string
-        releaseDate:
-          type: string
-          format: date-time
-        serialNumber:
-          type: string
-        smBiosVersion:
-          type: string
+        pageDetails:
+          $ref: '#/components/schemas/PaginationData'
+        software:
+          type: array
+          items:
+            $ref: '#/components/schemas/Software'
     ESXiDataExtent:
       type: object
       description: Data extent audit data
@@ -557,45 +322,12 @@ components:
           type: string
         status:
           type: string
-    Guest:
+    VideoBoard:
       type: object
-      description: Guest audit data
+      description: Videoboard audit data
       properties:
-        guestName:
+        displayAdapter:
           type: string
-        processorSpeedTotal:
-          type: integer
-          format: int32
-        memorySizeTotal:
-          type: integer
-          format: int64
-        numberOfSnapshots:
-          type: integer
-          format: int32
-        datastores:
-          type: string
-    SoftwarePage:
-      type: object
-      description: Software page
-      properties:
-        pageDetails:
-          $ref: '#/components/schemas/PaginationData'
-        software:
-          type: array
-          items:
-            $ref: '#/components/schemas/Software'
-    ESXiProcessor:
-      type: object
-      description: ESXi processor audit data
-      properties:
-        frequency:
-          type: number
-          format: double
-        name:
-          type: string
-        numberOfCores:
-          type: integer
-          format: int32
     PhysicalMemory:
       type: object
       description: Physical memory audit data
@@ -615,6 +347,92 @@ components:
           type: string
         bank:
           type: string
+    AttachedDevice:
+      type: object
+      description: Attached device audit data
+      properties:
+        deviceName:
+          type: string
+        deviceType:
+          type: string
+        driverFile:
+          type: string
+        driverFileLastModified:
+          type: string
+          format: date-time
+        driverManufacturer:
+          type: string
+        driverName:
+          type: string
+        driverVersion:
+          type: string
+        portName:
+          type: string
+    PaginationData:
+      type: object
+      description: Pagination data
+      properties:
+        count:
+          type: integer
+          format: int32
+        totalCount:
+          type: integer
+          format: int64
+        prevPageUrl:
+          type: string
+        nextPageUrl:
+          type: string
+    Printer:
+      type: object
+      description: Printer audit data
+      properties:
+        printedPageCount:
+          type: integer
+          format: int64
+    ESXiNic:
+      type: object
+      description: ESXi newtwork adapter audit data
+      properties:
+        name:
+          type: string
+        ipv4:
+          type: string
+        ipv6:
+          type: string
+        macAddress:
+          type: string
+        speed:
+          type: string
+        type:
+          type: string
+    ESXiHostAudit:
+      type: object
+      description: ESXi Host audit data
+      properties:
+        portalUrl:
+          type: string
+        systemInfo:
+          $ref: '#/components/schemas/ESXiSystemInfo'
+        guests:
+          type: array
+          items:
+            $ref: '#/components/schemas/Guest'
+        processors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ESXiProcessor'
+        nics:
+          type: array
+          items:
+            $ref: '#/components/schemas/ESXiNic'
+        physicalMemory:
+          type: array
+          items:
+            $ref: '#/components/schemas/PhysicalMemory'
+        datastores:
+          type: array
+          items:
+            $ref: '#/components/schemas/ESXiDatastore'
     Display:
       type: object
       description: Display audit data
@@ -627,17 +445,199 @@ components:
         screenWidth:
           type: integer
           format: int32
-    NetworkInterface:
+    PrinterAudit:
       type: object
-      description: Network interface audit data
+      description: Printer audit data
+      properties:
+        portalUrl:
+          type: string
+        snmpInfo:
+          $ref: '#/components/schemas/SnmpInfo'
+        printerMarkerSupplies:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrinterMarkerSupply'
+        printer:
+          $ref: '#/components/schemas/Printer'
+        systemInfo:
+          $ref: '#/components/schemas/PrinterSystemInfo'
+        nics:
+          type: array
+          items:
+            $ref: '#/components/schemas/NetworkInterface'
+    LogicalDisk:
+      type: object
+      description: Logical disk audit data
+      properties:
+        description:
+          type: string
+        diskIdentifier:
+          type: string
+        freespace:
+          type: integer
+          format: int64
+        size:
+          type: integer
+          format: int64
+    Software:
+      type: object
+      description: Software audit data
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+    ESXiSystemInfo:
+      type: object
+      description: ESXi host system info audit data
+      properties:
+        manufacturer:
+          type: string
+        model:
+          type: string
+        name:
+          type: string
+        numberOfSnapshots:
+          type: integer
+          format: int32
+        serviceTag:
+          type: string
+    SnmpInfo:
+      type: object
+      description: SNMP info audit data
+      properties:
+        snmpName:
+          type: string
+        snmpContact:
+          type: string
+        snmpDescription:
+          type: string
+        snmpLocation:
+          type: string
+        snmpUptime:
+          type: string
+        nicManufacturer:
+          type: string
+        objectId:
+          type: string
+        snmpSerial:
+          type: string
+    Guest:
+      type: object
+      description: Guest audit data
+      properties:
+        guestName:
+          type: string
+        processorSpeedTotal:
+          type: integer
+          format: int32
+        memorySizeTotal:
+          type: integer
+          format: int64
+        numberOfSnapshots:
+          type: integer
+          format: int32
+        datastores:
+          type: string
+    PrinterMarkerSupply:
+      type: object
+      description: Printer marker supply audit data
+      properties:
+        description:
+          type: string
+        maxCapacity:
+          type: string
+        suppliesLevel:
+          type: string
+    ESXiDatastore:
+      type: object
+      description: ESXi datastore audit data
+      properties:
+        datastoreName:
+          type: string
+        subscriptionPercent:
+          type: integer
+          format: int32
+        freeSpace:
+          type: integer
+          format: int64
+        size:
+          type: integer
+          format: int64
+        fileSystem:
+          type: string
+        status:
+          type: string
+        dataExtents:
+          type: array
+          items:
+            $ref: '#/components/schemas/ESXiDataExtent'
+    SystemInfo:
+      type: object
+      description: System info audit data
+      properties:
+        manufacturer:
+          type: string
+        model:
+          type: string
+        totalPhysicalMemory:
+          type: integer
+          format: int64
+        username:
+          type: string
+        dotNetVersion:
+          type: string
+        totalCpuCores:
+          type: integer
+          format: int32
+    Bios:
+      type: object
+      description: Bios audit data
       properties:
         instance:
           type: string
-        ipv4:
+        releaseDate:
           type: string
-        ipv6:
+          format: date-time
+        serialNumber:
           type: string
-        macAddress:
+        smBiosVersion:
           type: string
-        type:
+    ESXiProcessor:
+      type: object
+      description: ESXi processor audit data
+      properties:
+        frequency:
+          type: number
+          format: double
+        name:
+          type: string
+        numberOfCores:
+          type: integer
+          format: int32
+    MobileInfo:
+      type: object
+      description: Mobile info audit data
+      properties:
+        iccid:
+          type: string
+        imei:
+          type: string
+        number:
+          type: string
+        operator:
+          type: string
+    Processor:
+      type: object
+      description: Processor audit data
+      properties:
+        name:
+          type: string
+    BaseBoard:
+      type: object
+      description: Baseboard audit data
+      properties:
+        manufacturer:
+          type: string
+        product:
           type: string
