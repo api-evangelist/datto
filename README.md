@@ -64,6 +64,138 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Datto is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Datto is a data-protection and IT-management vendor for managed service providers (MSPs) and internal IT teams, now part of Kaseya. Its platform spans business continuity and disaster recovery (SIRIS, ALTO, Endpoint Backup), SaaS Protection for Microsoft 365 and Google Workspace, Remote Monitoring and Management (Datto RMM), Autotask professional services automation (PSA), networking (Wi-Fi, switches, firewalls, Secure Edge), and cybersecurity (Managed SOC, EDR, antivirus). Datto RMM publishes a versioned REST API (v2, OpenAPI 3.1) with platform-specific regional hosts on the CentraStage infrastructure, OAuth 2.0 access tokens, request-rate limiting, and paginated responses, letting partners programmatically manage sites, devices, alerts, jobs, audits, and account variables. Datto runs a formal Developer Program offering sandbox environments, technical enablement, and an integrations marketplace for vendors building on its solutions.
 
-Backed by: general-catalyst
+**Areas:** Company · Data Protection · Backup · Disaster Recovery · Managed Service Providers · RMM · Endpoint Management · Cybersecurity · IT Operations · SaaS Protection
+
+## Datto on APIs.io
+
+Everything profiled for Datto is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/datto/](https://apis.io/providers/datto/)** — or go straight to one of the APIs or properties below.
+
+### APIs (10)
+
+- [Datto /v2/account API](https://apis.io/apis/datto/datto-v2-account-api/) — Operations on accounts
+- [Datto /v2/activity-logs API](https://apis.io/apis/datto/datto-v2-activity-logs-api/) — Fetching RMM Activity Logs
+- [Datto /v2/alert API](https://apis.io/apis/datto/datto-v2-alert-api/) — Operations on alerts
+- [Datto /v2/audit API](https://apis.io/apis/datto/datto-v2-audit-api/) — Operations on audit data
+- [Datto /v2/device API](https://apis.io/apis/datto/datto-v2-device-api/) — Operations on devices
+- [Datto /v2/filter API](https://apis.io/apis/datto/datto-v2-filter-api/) — Operations on filters
+- [Datto /v2/job API](https://apis.io/apis/datto/datto-v2-job-api/) — Operations on jobs
+- [Datto /v2/site API](https://apis.io/apis/datto/datto-v2-site-api/) — Operations on sites
+- [Datto /v2/system API](https://apis.io/apis/datto/datto-v2-system-api/) — RMM API System operations
+- [Datto /v2/user API](https://apis.io/apis/datto/datto-v2-user-api/) — Operations on users
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [datto-rmm](https://apis.io/servers/datto/datto-rmm/)
+
+#### Collections (10)
+
+Postman and Open Collection request collections.
+
+- [Datto RMM /v2/account /v2/account /v2/account API](https://apis.io/collections/datto/open-datto-v2-account-api/)
+- [Datto RMM /v2/account /v2/account /v2/activity-logs API](https://apis.io/collections/datto/open-datto-v2-activity-logs-api/)
+- [Datto RMM /v2/account /v2/account /v2/alert API](https://apis.io/collections/datto/open-datto-v2-alert-api/)
+- [Datto RMM /v2/account /v2/account /v2/audit API](https://apis.io/collections/datto/open-datto-v2-audit-api/)
+- [Datto RMM /v2/account /v2/account /v2/device API](https://apis.io/collections/datto/open-datto-v2-device-api/)
+- [Datto RMM /v2/account /v2/account /v2/filter API](https://apis.io/collections/datto/open-datto-v2-filter-api/)
+- [Datto RMM /v2/account /v2/account /v2/job API](https://apis.io/collections/datto/open-datto-v2-job-api/)
+- [Datto RMM /v2/account /v2/account /v2/site API](https://apis.io/collections/datto/open-datto-v2-site-api/)
+- [Datto RMM /v2/account /v2/account /v2/system API](https://apis.io/collections/datto/open-datto-v2-system-api/)
+- [Datto RMM /v2/account /v2/account /v2/user API](https://apis.io/collections/datto/open-datto-v2-user-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Datto Rmm Overlay](https://apis.io/overlays/datto/datto-rmm-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Datto Authentication](https://apis.io/security/datto/datto-authentication/)
+- [Datto Domain Security](https://apis.io/security/datto/datto-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Datto Rate Limits](https://apis.io/rate-limits/datto/datto-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.datto.com/)
+- [Documentation](https://rmm.datto.com/help/en/Content/2SETUP/APIv2.htm)
+- [API reference](https://concord-api.centrastage.net/api/swagger-ui/index.html)
+- [Pricing](https://www.datto.com/pricing/)
+- [Sign up](https://www.datto.com/developers/join)
+- [Support](https://www.datto.com/support/)
+- [Blog](https://www.datto.com/blog/)
+- [Trust centre](https://www.kaseya.com/trust-center/)
+- [Terms of service](https://www.kaseya.com/legal/website-terms-of-use/)
+- [Privacy policy](https://www.kaseya.com/legal/kaseya-privacy-statement/)
+- [Status](https://status.datto.com/)
+
+## API Evangelist rating
+
+**Kin Score 43.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 40.2 |
+| Contract governance | 4.5 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 44.7 |
+
+**Agent readiness 27.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/datto/](https://apis.io/providers/datto/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Datto: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/datto/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
